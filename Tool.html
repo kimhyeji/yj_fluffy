@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+
+    <!--font -->
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="PC">
+        <nav class="header">
+            <a href="index.html"><img src="https://i.imgur.com/USJ0DrP.png" alt=""></a>
+            <ul class="menu-box font-20">
+                <li><a href="#">Plant</a>
+                    <ul class="sub-menu-box">
+                        <li><a href="BasicPlant.html">Basic Plant</a></li>
+                        <li><a href="WithPet.html">With Pet</a></li>
+                        <li><a href="Interior.html">Interior Plant</a></li>
+                        <li><a href="Tool.html">Tool</a></li>
+                    </ul>
+                </li>
+                <li><a href="PlantNote-detail.html">Plant Note</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+            <ul class="menu-box-2">
+                <li><a href="#" class="font-20-g btn_cart">Cart</a></li>
+                <li><a href="#" class="font-20-g btn_logIn">Log in</a></li>
+            </ul>
+        </nav>
+        <section class="bg LogIn">
+            <div class="popup">
+                <div>
+                    <a href="Tool.html"><img src="https://imgur.com/IgM3HeN.png" alt=""></a>
+                </div>
+            <div>
+                <img src="https://i.imgur.com/USJ0DrP.png" alt="">
+                <div>
+                    <span>아이디</span>
+                    <input type="text" placeholder="" value="">
+                </div>
+                <div>
+                    <span>비밀번호</span>
+                    <input type="text" placeholder="" value="">
+                </div>
+                <button>로그인</button>
+                <button>회원가입</button>
+            </div>
+        </section>
+        <section class="bg Cart">
+            <div class="popup-cart">
+                <div>
+                    <a href="Tool.html"><img src="https://imgur.com/IgM3HeN.png" alt=""></a>
+                </div>
+                <div>
+                    <h1>Cart</h1>
+                </div>
+                <div>
+                    <span>배송주소</span>
+                    <input type="text" placeholder="주소를 입력해주세요." value="">
+                    <button>변경</button>
+                </div>
+                <div class="list">
+                    <button>전체선택</button>
+                    <span>담은 식물이 없습니다.</span>
+                </div>
+                <div class="btn_box">
+                    <button>삭제하기</button>
+                    <button>결제하기</button>
+                </div>
+            </div>
+        </section>
+        <section class="basic-plant">
+            <h1 class="font-80">Tool</h1>
+            <div class="plant-box">
+                <div class="container">
+                    <img class="plant-1" src="https://imgur.com/kJkrdQV.png" alt="">
+                    <img class="plant-2 side-margin" src="https://imgur.com/pYZV8la.png" alt="">
+                    <img class="plant-3" src="https://imgur.com/1p4lELE.png" alt="">
+                </div>
+                <div class="container">
+                    <img class="plant-4" src="https://imgur.com/6uu1cTL.png" alt="">
+                </div>
+            </div>
+            <div class="plant-1 plant-box-hover">
+                <div class="title-box">
+                    <span class="plant-title">물뿌리개</span>
+                </div>
+                <div class="line"></div>
+                <nav>
+                    <span class="plant-content">미니멀한 디자인과 세련된 블랙 컬러의 물뿌리개입니다. 넓은 주입구로 물을 쉽게 채울 수 있으며, 곡선형의 주둥이는 섬세하고 부드럽게 물을 줄 수 있습니다.</span>
+                    <span class="tool-price">15,000원</span>
+                </nav>
+                <div class="line"></div>
+                <div class="box-count">
+                    <span class="box-count__minus"><img src="https://imgur.com/SvJluV1.png" alt=""></span>
+                    <span class="box-count__num">0</span>
+                    <span class="box-count__plus"><img src="https://imgur.com/jGsPxZh.png" alt=""></span>
+                </div>
+                <button>Cart</button>
+            </div>
+            <div class="plant-2 plant-box-hover">
+                <div class="title-box">
+                    <span class="plant-title">테라코타 화분</span>
+                </div>
+                <div class="line"></div>
+                <nav>
+                    <span class="plant-content">자연의 따뜻한 감성이 느껴지는 테라코타 화분입니다. 물빠짐을 도와 식물의 뿌리가 자유롭게 숨 쉴 수 있으며, 흙의 컨디션을 촉촉하게 유지하는 데 좋습니다.</span>
+                    <span class="tool-price">15,000원</span>
+                </nav>
+                <div class="line"></div>
+                <div class="box-count">
+                    <span class="box-count__minus"><img src="https://imgur.com/SvJluV1.png" alt=""></span>
+                    <span class="box-count__num">0</span>
+                    <span class="box-count__plus"><img src="https://imgur.com/jGsPxZh.png" alt=""></span>
+                </div>
+                <button>Cart</button>
+            </div>
+            <div class="plant-3 plant-box-hover">
+                <div class="title-box">
+                    <span class="plant-title">모종삽</span>
+                </div>
+                <div class="line"></div>
+                <nav>
+                    <span class="plant-content">견고한 재질로 제작된 내구성 좋은 모종삽입니다. 가벼우면서 인체공학적인 설계로 실용성이 뛰어납니다. 작은 크기로 식물을 심거나 옮길 때 편리하며, 뿌리 손상을 최소화할 수 있습니다.</span>
+                    <span class="tool-price">6,000원</span>
+                </nav>
+                <div class="line"></div>
+                <div class="box-count">
+                    <span class="box-count__minus"><img src="https://imgur.com/SvJluV1.png" alt=""></span>
+                    <span class="box-count__num">0</span>
+                    <span class="box-count__plus"><img src="https://imgur.com/jGsPxZh.png" alt=""></span>
+                </div>
+                <button>Cart</button>
+            </div>
+            <div class="plant-4 plant-box-hover">
+                <div class="title-box">
+                    <span class="plant-title">도자기 화분</span>
+                </div>
+                <div class="line"></div>
+                <nav>
+                    <span class="plant-content">자연의 질감을 살린 고급스러운 도자기 화분입니다. 흙의 색감과 거친 표면이 세련되고 내추럴한 분위기를 연출해 인테리어 효과가 있습니다. 화분 내부는 부드럽게 처리되어 있습니다.</span>
+                    <span class="tool-price">23,000원</span>
+                </nav>
+                <div class="line"></div>
+                <div class="box-count">
+                    <span class="box-count__minus"><img src="https://imgur.com/SvJluV1.png" alt=""></span>
+                    <span class="box-count__num">0</span>
+                    <span class="box-count__plus"><img src="https://imgur.com/jGsPxZh.png" alt=""></span>
+                </div>
+                <button>Cart</button>
+            </div>
+        </section>
+        <section class="footer">
+            <div>
+                <img src="https://imgur.com/ryaK1aS.png" alt="">
+                <br>
+                <span>대표자명: 윤예진</span>
+                <span>|</span>
+                <span>아메일: awfyuun@gmail.com</span>
+                <br>
+                <span>고객센터: 1234-5678</span>
+                <span>|</span>
+                <span>서울특별시 00구 34-21 00빌딩 234호</span>
+                <span>|</span>
+                <span>사업자번호: 123-45-6789</span>
+                <span class="fluffy-touching">Copyright © FluffyTouching. All Rights Reserved.</span>
+            </div>
+            <div class="footer-menu">
+                <ul>
+                    <li><a href="#">Plant</a>
+                    <ul>
+                        <li><a href="BasicPlant.html">Basic Plant</a></li>
+                        <li><a href="WithPet.html">With Pet</a></li>
+                        <li><a href="Interior.html">Interior Plant</a></li>
+                        <li><a href="Tool.html">Tool</a></li>
+                    </ul>
+                    </li>
+                    <li><a href="PlantNote-detail.html">Plant Note</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <img class="sns" src="https://imgur.com/10TjDmY.png" alt="">
+        </section>
+    </div>
+
+    <div class="mobile">
+        <nav class="header">
+            <div>
+                <a href=""><img src="https://imgur.com/ZpJBGPw.png" alt=""></a>
+                <img class="btn_sideBar" src="https://imgur.com/SWOeIFa.png" alt="">
+            </div>
+        </nav>
+        <section class="mobile-sideBar">
+            <nav class="header">
+                <div>
+                    <img src="https://imgur.com/ZpJBGPw.png" alt="">
+                    <img class="clear" src="https://imgur.com/IgM3HeN.png" alt="">
+                </div>
+            </nav>
+            <div class="menu">
+                <a href="#">Plant</a>
+                <a href="#">Basic Plant</a>
+                <a href="#">With Pet</a>
+                <a href="#">Interior Plant</a>
+                <a href="#">Tool</a>
+                <a href="#">Plant Note</a>
+                <a href="#">Contact</a>
+                <div></div>
+                <a href="#">Cart</a>
+                <a href="#">Login</a>
+            </div>
+        </section>
+        <section class="basic-plant">
+            <h1 class="font-80">Tool</h1>
+            <div class="plant-box">
+                <img class="plant-1" src="https://imgur.com/fAbe9C5.png" alt="">
+                <div class="plant-box-hover">
+                    <div class="title-box">
+                        <span class="plant-title">물뿌리개</span>
+                    </div>
+                    <div class="line"></div>
+                    <nav>
+                        <span class="plant-content">미니멀한 디자인과 세련된 블랙 컬러의 물뿌리개입니다. 넓은 주입구로 물을 쉽게 채울 수 있으며, 곡선형의 주둥이는 섬세하고 부드럽게 물을 줄 수 있습니다.</span>
+                        <span class="tool-price">15,000원</span>
+                    </nav>
+                    <div class="line"></div>
+                    <div class="box-count">
+                        <span class="box-count__minus"><img src="https://imgur.com/SvJluV1.png" alt=""></span>
+                        <span class="box-count__num">0</span>
+                        <span class="box-count__plus"><img src="https://imgur.com/jGsPxZh.png" alt=""></span>
+                    </div>
+                    <button>Cart</button>
+                </div>
+                <img class="plant-2" src="https://imgur.com/46holIT.png" alt="">
+                <div class="plant-box-hover">
+                    <div class="title-box">
+                        <span class="plant-title">테라코타 화분</span>
+                    </div>
+                    <div class="line"></div>
+                    <nav>
+                        <span class="plant-content">자연의 따뜻한 감성이 느껴지는 테라코타 화분입니다. 물빠짐을 도와 식물의 뿌리가 자유롭게 숨 쉴 수 있으며, 흙의 컨디션을 촉촉하게 유지하는 데 좋습니다.</span>
+                        <span class="tool-price">15,000원</span>
+                    </nav>
+                    <div class="line"></div>
+                    <div class="box-count">
+                        <span class="box-count__minus"><img src="https://imgur.com/SvJluV1.png" alt=""></span>
+                        <span class="box-count__num">0</span>
+                        <span class="box-count__plus"><img src="https://imgur.com/jGsPxZh.png" alt=""></span>
+                    </div>
+                    <button>Cart</button>
+                </div>
+                <img class="plant-3" src="https://imgur.com/HAmWnbQ.png" alt="">
+                <div class="plant-box-hover">
+                    <div class="title-box">
+                        <span class="plant-title">모종삽</span>
+                    </div>
+                    <div class="line"></div>
+                    <nav>
+                        <span class="plant-content">견고한 재질로 제작된 내구성 좋은 모종삽입니다. 가벼우면서 인체공학적인 설계로 실용성이 뛰어납니다. 작은 크기로 식물을 심거나 옮길 때 편리하며, 뿌리 손상을 최소화할 수 있습니다.</span>
+                        <span class="tool-price">6,000원</span>
+                    </nav>
+                    <div class="line"></div>
+                    <div class="box-count">
+                        <span class="box-count__minus"><img src="https://imgur.com/SvJluV1.png" alt=""></span>
+                        <span class="box-count__num">0</span>
+                        <span class="box-count__plus"><img src="https://imgur.com/jGsPxZh.png" alt=""></span>
+                    </div>
+                    <button>Cart</button>
+                </div>
+                <img class="plant-4" src="https://imgur.com/UBYhhRE.png" alt="">
+                <div class="plant-box-hover">
+                    <div class="title-box">
+                        <span class="plant-title">도자기 화분</span>
+                    </div>
+                    <div class="line"></div>
+                    <nav>
+                        <span class="plant-content">자연의 질감을 살린 고급스러운 도자기 화분입니다. 흙의 색감과 거친 표면이 세련되고 내추럴한 분위기를 연출해 인테리어 효과가 있습니다. 화분 내부는 부드럽게 처리되어 있습니다.</span>
+                        <span class="tool-price">23,000원</span>
+                    </nav>
+                    <div class="line"></div>
+                    <div class="box-count">
+                        <span class="box-count__minus"><img src="https://imgur.com/SvJluV1.png" alt=""></span>
+                        <span class="box-count__num">0</span>
+                        <span class="box-count__plus"><img src="https://imgur.com/jGsPxZh.png" alt=""></span>
+                    </div>
+                    <button>Cart</button>
+                </div>
+            </div>
+        </section>
+        <section class="footer">
+            <div class="footer-menu">
+                <ul>
+                    <li><a href="#">Plant</a>
+                    <ul>
+                        <li><a href="BasicPlant.html">Basic Plant</a></li>
+                        <li><a href="WithPet.html">With Pet</a></li>
+                        <li><a href="Interior.html">Interior Plant</a></li>
+                        <li><a href="Tool.html">Tool</a></li>
+                    </ul>
+                    </li>
+                    <li><a href="PlantNote-detail.html">Plant Note</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                    <li><img src="https://imgur.com/10TjDmY.png" alt=""></li>
+                </ul>
+            </div>
+            <div>
+                <img src="https://imgur.com/ryaK1aS.png" alt="">
+                <br>
+                <span>대표자명: 윤예진</span>
+                <br>
+                <span>아메일: awfyuun@gmail.com</span>
+                <br>
+                <span>고객센터: 1234-5678</span>
+                <br>
+                <span>서울특별시 00구 34-21 00빌딩 234호</span>
+                <br>
+                <span>사업자번호: 123-45-6789</span>
+                <span class="fluffy-touching">Copyright © FluffyTouching. All Rights Reserved.</span>
+            </div>
+        </section>
+    </div>
+</body>
+
+
+<script>
+function BoxCount__init() {
+    $(".box-count").each(function (index, node) {
+        const $boxCount = $(node);
+
+        const $btnMinus = $boxCount.find(".box-count__minus");
+        const $btnPlus = $boxCount.find(".box-count__plus");
+        const $num = $boxCount.find(".box-count__num");
+
+        $btnMinus.click(function () {
+        const num = parseInt($num.text());
+        const newNum = num - 1 >= 0 ? num - 1 : 0;
+        $num.text(newNum);
+        });
+
+        $btnPlus.click(function () {
+        const num = parseInt($num.text());
+        const newNum = num + 1 >= 0 ? num + 1 : 0;
+        $num.text(newNum);
+        });
+    });
+    }
+BoxCount__init();
+
+//card-hover
+$('[class^="plant-"]').mouseenter(function () {
+    let className = $(this).attr("class").split(" ")[0];
+    let $targetDiv = $(`div.${className}`);
+    
+    // 선택된 요소가 존재하는지 확인 후 실행
+    if ($targetDiv.length && $targetDiv.attr('class')) {
+        let className2 = $targetDiv.attr('class').split(' ')[0];
+        if (className === className2) {
+            $targetDiv.addClass('active');
+        }
+    }
+});
+
+$('[class^="plant-"]').mouseleave(function () {
+    let className = $(this).attr("class").split(" ")[0];
+    let $targetDiv = $(`div.${className}`);
+    
+    // 선택된 요소가 존재하는지 확인 후 실행
+    if ($targetDiv.length && $targetDiv.attr('class')) {
+        let className2 = $targetDiv.attr('class').split(' ')[0];
+        if (className === className2) {
+            $targetDiv.removeClass('active');
+        }
+    }
+});
+
+// Popup
+function Popup__show() {
+    $('.LogIn').addClass('active'); 
+    $('body').css('overflow','hidden');
+}
+
+function Popup__hide() {
+    $('.LogIn').removeClass('active'); 
+    $('body').css('overflow','visible');
+}
+
+
+function Popup__init() {
+    $('.btn_logIn').click(function() {
+    Popup__show();
+});
+
+$('.clear').click(function() {
+    Popup__hide();
+});
+}
+
+Popup__init();
+
+// Popup
+function Popup_2__show() {
+    $('.Cart').addClass('active'); 
+    $('body').css('overflow','hidden');
+}
+
+function Popup_2__hide() {
+    $('.Cart').removeClass('active'); 
+    $('body').css('overflow','visible');
+}
+
+
+function Popup_2__init() {
+$('.btn_cart').click(function() {
+    Popup_2__show();
+});
+
+$('.clear').click(function() {
+    Popup_2__hide();
+});
+}
+
+Popup_2__init();
+</script>
+</html>

@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+
+    <!--font -->
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="PC">
+            <nav class="header">
+                <a href="index.html"><img src="https://i.imgur.com/USJ0DrP.png" alt=""></a>
+                <ul class="menu-box font-20">
+                    <li><a href="#">Plant</a>
+                        <ul class="sub-menu-box">
+                            <li><a href="BasicPlant.html">Basic Plant</a></li>
+                            <li><a href="WithPet.html">With Pet</a></li>
+                            <li><a href="Interior.html">Interior Plant</a></li>
+                            <li><a href="Tool.html">Tool</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="PlantNote-detail.html">Plant Note</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                </ul>
+                <ul class="menu-box-2">
+                    <li><a href="#" class="font-20-g btn_cart">Cart</a></li>
+                    <li><a href="#" class="font-20-g btn_logIn">Log in</a></li>
+                </ul>
+            </nav>
+            <section class="bg LogIn">
+                <div class="popup">
+                    <div>
+                        <a href="BasicPlant.html"><img src="https://imgur.com/IgM3HeN.png" alt=""></a>
+                    </div>
+                <div>
+                    <img src="https://i.imgur.com/USJ0DrP.png" alt="">
+                    <div>
+                        <span>아이디</span>
+                        <input type="text" placeholder="" value="">
+                    </div>
+                    <div>
+                        <span>비밀번호</span>
+                        <input type="text" placeholder="" value="">
+                    </div>
+                    <button>로그인</button>
+                    <button>회원가입</button>
+                </div>
+            </section>
+            <section class="bg Cart">
+                <div class="popup-cart">
+                    <div>
+                        <a href="BasicPlant.html"><img src="https://imgur.com/IgM3HeN.png" alt=""></a>
+                    </div>
+                    <div>
+                        <h1>Cart</h1>
+                    </div>
+                    <div>
+                        <span>배송주소</span>
+                        <input type="text" placeholder="주소를 입력해주세요." value="">
+                        <button>변경</button>
+                    </div>
+                    <div class="list">
+                        <button>전체선택</button>
+                        <span>담은 식물이 없습니다.</span>
+                    </div>
+                    <div class="btn_box">
+                        <button>삭제하기</button>
+                        <button>결제하기</button>
+                    </div>
+                </div>
+            </section>
+            <section class="basic-plant">
+                <h1 class="font-80">Basic Plant</h1>
+                <div class="plant-box">
+                    <div class="container">
+                        <img class="plant-1" src="https://imgur.com/2vERguO.png" alt="">
+                        <img class="plant-2 side-margin" src="https://imgur.com/v9K05le.png" alt="">
+                        <img class="plant-3" src="https://imgur.com/kNnZkIA.png" alt="">
+                    </div>
+                    <div class="container">
+                        <img class="plant-4" src="https://imgur.com/kPOR3gX.png" alt="">
+                        <img class="plant-5 side-margin" src="https://imgur.com/rlnlTRG.png" alt="">
+                        <img class="plant-6" src="https://imgur.com/wpGLbK2.png" alt="">
+                    </div>
+                    <div class="container">
+                        <img class="plant-7" src="https://imgur.com/lpm3isi.png" alt="">
+                        <img class="plant-8 side-margin" src="https://imgur.com/kPYnonP.png" alt="">
+                    </div>
+                </div>
+                <div class="plant-1 plant-box-hover">
+                    <div class="title-box">
+                        <span class="plant-title">산세베리아</span>
+                        <img id="margin-3" src="https://imgur.com/iUiOqDZ.png" alt="">
+                    </div>
+                    <div class="line"></div>
+                    <nav>
+                        <div class="plant-tip">
+                            <img src="https://imgur.com/fWkrSFP.png" alt="">
+                            <span>햇빛이 잘 드는 곳에서 키워주세요.</span>
+                        </div>
+                        <div class="plant-tip">
+                            <img src="https://imgur.com/fWkrSFP.png" alt="">
+                            <span>건조에는 강하지만 과습에는 약해요.</span>
+                        </div>
+                        <span class="plant-content">아스파라거스과의 다육식물입니다. 단단한 질감과 생명력이 강해요. 5월부터 7월은 별모양의 흰 꽃이 핍니다. 가드닝이 처음이시라면 추천해요.</span>
+                        <span class="plant-price">18,000원</span>
+                    </nav>
+                    <div class="line"></div>
+                    <div class="box-count">
+                    <span class="box-count__minus"><img src="https://imgur.com/SvJluV1.png" alt=""></span>
+                    <span class="box-count__num">0</span>
+                    <span class="box-count__plus"><img src="https://imgur.com/jGsPxZh.png" alt=""></span>
+                    </div>
+                    <button>Cart</button>
+                </div>
+                <div class="plant-2 plant-box-hover">
+                    <div class="title-box">
+                        <span class="plant-title">필레아페페</span>
+                        <img id="margin-3" src="https://imgur.com/iUiOqDZ.png" alt="">
+                    </div>
+                    <div class="line"></div>
+                    <nav>
+                        <div class="plant-tip">
+                            <img src="https://imgur.com/fWkrSFP.png" alt="">
+                            <span>햇빛이 잘 드는 창가 또는 거실에서 키워주세요.</span>
+                        </div>
+                        <div class="plant-tip">
+                            <img src="https://imgur.com/IOD8jnh.png" alt="">
+                            <span>겉흙이 마르면 물을 흠뻑 주세요.</span>
+                        </div>
+                        <span class="plant-content">독특한 원형 잎 모양의 물을 좋아하는 식물입니다. 빠르게 성장하며 공기 정화 능력이 뛰어나요. 관리가 쉬워 가드닝이 처음이신 분들에게 추천해요. 수경재배도 가능해요!</span>
+                        <span class="plant-price">15,000원</span>
+                    </nav>
+                    <div class="line"></div>
+                    <div class="box-count">
+                    <span class="box-count__minus"><img src="https://imgur.com/SvJluV1.png" alt=""></span>
+                    <span class="box-count__num">0</span>
+                    <span class="box-count__plus"><img src="https://imgur.com/jGsPxZh.png" alt=""></span>
+                    </div>
+                    <button>Cart</button>
+                </div>
+                <div class="plant-3 plant-box-hover">
+                    <div class="title-box">
+                        <span class="plant-title">테이블야자</span>
+                        <div class="tag-box">
+                            <img src="https://imgur.com/4nCllFg.png" alt="">
+                            <img src="https://imgur.com/iUiOqDZ.png" alt="">
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                    <nav>
+                        <div class="plant-tip">
+                            <img src="https://imgur.com/fWkrSFP.png" alt="">
+                            <span>직사광선은 피하고, 반음지에서 키워주세요.</span>
+                        </div>
+                        <div class="plant-tip">
+                            <img src="https://imgur.com/IOD8jnh.png" alt="">
+                            <span>겉흙이 마르면 물을 흠뻑 주세요.</span>
+                        </div>
+                        <span class="plant-content">실내에서 자주 키우는 인기 있는 관엽식물입니다. 병충해에 강하고, 적당한 빛과 습도에서 잘 자랍니다. 물론 공기 정화 능력도 뛰어나요! 집이나 사무실에 자연스러운 느낌을 원하는 분들에게 추천해요.</span>
+                        <span class="plant-price">63,000원</span>
+                    </nav>
+                    <div class="line"></div>
+                    <div class="box-count">
+                    <span class="box-count__minus"><img src="https://imgur.com/SvJluV1.png" alt=""></span>
+                    <span class="box-count__num">0</span>
+                    <span class="box-count__plus"><img src="https://imgur.com/jGsPxZh.png" alt=""></span>
+                    </div>
+                    <button>Cart</button>
+                </div>
+                <div class="plant-4 plant-box-hover">
+                    <div class="title-box">
+                        <span class="plant-title">피쉬본 선인장</span>
+                        <img src="https://imgur.com/iUiOqDZ.png" alt="">
+                    </div>
+                    <div class="line"></div>
+                    <nav>
+                        <div class="plant-tip">
+                            <img src="https://imgur.com/fWkrSFP.png" alt="">
+                            <span>직사광선은 피하고, 반양지에서 키워주세요.</span>
+                        </div>
+                        <div class="plant-tip">
+                            <img src="https://imgur.com/IOD8jnh.png" alt="">
+                            <span>겉흙이 마르면 물을 흠뻑 주세요.</span>
+                        </div>
+                        <span class="plant-content">독특한 모양의 잎을 가진 선인장입니다. 하루 2~3시간의 햇빛으로 잘 자라요. 주변 공기가 건조해지지 않도록 조심해주세요. 이국적인 느낌을 원하는 가드너 분들에게 추천해요. </span>
+                        <span class="plant-price">8,700원</span>
+                    </nav>
+                    <div class="line"></div>
+                    <div class="box-count">
+                    <span class="box-count__minus"><img src="https://imgur.com/SvJluV1.png" alt=""></span>
+                    <span class="box-count__num">0</span>
+                    <span class="box-count__plus"><img src="https://imgur.com/jGsPxZh.png" alt=""></span>
+                    </div>
+                    <button>Cart</button>
+                </div>
+                <div class="plant-5 plant-box-hover">
+                    <div class="title-box">
+                        <span class="plant-title">수채화 고무나무</span>
+                        <img src="https://imgur.com/4nCllFg.png" alt="">
+                    </div>
+                    <div class="line"></div>
+                    <nav>
+                        <div class="plant-tip">
+                            <img src="https://imgur.com/fWkrSFP.png" alt="">
+                            <span>직사광선은 피하고, 반양지에서 키워주세요.</span>
+                        </div>
+                        <div class="plant-tip">
+                            <img src="https://imgur.com/IOD8jnh.png" alt="">
+                            <span>한달에 1-2번 물을 주세요.</span>
+                        </div>
+                        <span class="plant-content">크고 광택있는 잎이 특징인 식물입니다. 강한 생명력과 빠른 성장 속도를 가지고 있어요. 다양한 환경에서도 잘 자라지만 밝은 간접광(반양지)이 적합합니다.</span>
+                        <span class="plant-price">32,000원</span>
+                    </nav>
+                    <div class="line"></div>
+                    <div class="box-count">
+                    <span class="box-count__minus"><img src="https://imgur.com/SvJluV1.png" alt=""></span>
+                    <span class="box-count__num">0</span>
+                    <span class="box-count__plus"><img src="https://imgur.com/jGsPxZh.png" alt=""></span>
+                    </div>
+                    <button>Cart</button>
+                </div>
+                <div class="plant-6 plant-box-hover">
+                    <div class="title-box">
+                        <span class="plant-title">스킨답서스</span>
+                        <img id="margin-3" src="https://imgur.com/iUiOqDZ.png" alt="">
+                    </div>
+                    <div class="line"></div>
+                    <nav>
+                        <div class="plant-tip">
+                            <img src="https://imgur.com/fWkrSFP.png" alt="">
+                            <span>직사광선은 피하고, 반양지/반음지에서 키워주세요.</span>
+                        </div>
+                        <div class="plant-tip">
+                            <img src="https://imgur.com/IOD8jnh.png" alt="">
+                            <span>겉흙이 마르면 물을 주세요.</span>
+                        </div>
+                        <span class="plant-content">손쉽게 키우기 좋은 실내 식물을 찾으시면 추천해요. 일산화탄소 제거에 탁월하며, 수경재배 가능한 식물입니다. 식물에 독성이 있어 반려동물에게는 위험해요!</span>
+                        <span class="plant-price">12,000원</span>
+                    </nav>
+                    <div class="line"></div>
+                    <div class="box-count">
+                    <span class="box-count__minus"><img src="https://imgur.com/SvJluV1.png" alt=""></span>
+                    <span class="box-count__num">0</span>
+                    <span class="box-count__plus"><img src="https://imgur.com/jGsPxZh.png" alt=""></span>
+                    </div>
+                    <button>Cart</button>
+                </div>
+                <div class="plant-7 plant-box-hover">
+                    <div class="title-box">
+                        <span class="plant-title">스파티필름</span>
+                        <img id="margin-3" src="https://imgur.com/iUiOqDZ.png" alt="">
+                    </div>
+                    <div class="line"></div>
+                    <nav>
+                        <div class="plant-tip">
+                            <img src="https://imgur.com/fWkrSFP.png" alt="">
+                            <span>직사광선은 피하고, 반양지에서 키워주세요.</span>
+                        </div>
+                        <div class="plant-tip">
+                            <img src="https://imgur.com/IOD8jnh.png" alt="">
+                            <span>겉흙이 마르면 물을 주세요.</span>
+                        </div>
+                        <span class="plant-content">우아한 흰 꽃과 광택 나는 녹색 잎을 가지고 있어요. 따뜻한 곳을 좋아하는 공기 정화 식물입니다.온도와 햇빛의 양이 맞으면 꽃이 펴요. 간편한 관리로도 건강하게 자라요!</span>
+                        <span class="plant-price">22,000원</span>
+                    </nav>
+                    <div class="line"></div>
+                    <div class="box-count">
+                    <span class="box-count__minus"><img src="https://imgur.com/SvJluV1.png" alt=""></span>
+                    <span class="box-count__num">0</span>
+                    <span class="box-count__plus"><img src="https://imgur.com/jGsPxZh.png" alt=""></span>
+                    </div>
+                    <button>Cart</button>
+                </div>
+                <div class="plant-8 plant-box-hover">
+                    <div class="title-box">
+                        <span class="plant-title">아레카야자</span>
+                        <div class="tag-box">
+                            <img id="margin" src="https://imgur.com/4nCllFg.png" alt="">
+                            <img id="margin-2" src="https://imgur.com/iUiOqDZ.png" alt="">
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                    <nav>
+                        <div class="plant-tip">
+                            <img src="https://imgur.com/fWkrSFP.png" alt="">
+                            <span>직사광선은 피하고, 반양지에서 키워주세요.</span>
+                        </div>
+                        <div class="plant-tip">
+                            <img src="https://imgur.com/IOD8jnh.png" alt="">
+                            <span>겉흙이 마르면 물을 흠뻑 주세요.</span>
+                        </div>
+                        <span class="plant-content">길고 가느다란 잎을 가진 자생력 강한 식물입니다. 세련된 느낌을 좋아하는 분에게 추천해요. 실내 공기를 정화하는 데 도움을 줍니다.</span>
+                        <span class="plant-price">38,000원</span>
+                    </nav>
+                    <div class="line"></div>
+                    <div class="box-count">
+                    <span class="box-count__minus"><img src="https://imgur.com/SvJluV1.png" alt=""></span>
+                    <span class="box-count__num">0</span>
+                    <span class="box-count__plus"><img src="https://imgur.com/jGsPxZh.png" alt=""></span>
+                    </div>
+                    <button>Cart</button>
+                </div>
+            </section>
+            <section class="footer">
+                <div>
+                    <img src="https://imgur.com/ryaK1aS.png" alt="">
+                    <br>
+                    <span>대표자명: 윤예진</span>
+                    <span>|</span>
+                    <span>아메일: awfyuun@gmail.com</span>
+                    <br>
+                    <span>고객센터: 1234-5678</span>
+                    <span>|</span>
+                    <span>서울특별시 00구 34-21 00빌딩 234호</span>
+                    <span>|</span>
+                    <span>사업자번호: 123-45-6789</span>
+                    <span class="fluffy-touching">Copyright © FluffyTouching. All Rights Reserved.</span>
+                </div>
+                <div class="footer-menu">
+                    <ul>
+                        <li><a href="#">Plant</a>
+                        <ul>
+                            <li><a href="BasicPlant.html">Basic Plant</a></li>
+                            <li><a href="WithPet.html">With Pet</a></li>
+                            <li><a href="Interior.html">Interior Plant</a></li>
+                            <li><a href="Tool.html">Tool</a></li>
+                        </ul>
+                        </li>
+                        <li><a href="PlantNote-detail.html">Plant Note</a></li>
+                        <li><a href="Contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <img class="sns" src="https://imgur.com/10TjDmY.png" alt="">
+            </section>
+        </div>
+
+        <div class="mobile">
+            <nav class="header">
+                <div>
+                    <a href=""><img src="https://imgur.com/ZpJBGPw.png" alt=""></a>
+                    <img class="btn_sideBar" src="https://imgur.com/SWOeIFa.png" alt="">
+                </div>
+            </nav>
+            <section class="mobile-sideBar">
+                <nav class="header">
+                    <div>
+                        <img src="https://imgur.com/ZpJBGPw.png" alt="">
+                        <img class="clear" src="https://imgur.com/IgM3HeN.png" alt="">
+                    </div>
+                </nav>
+                <div class="menu">
+                    <a href="#">Plant</a>
+                    <a href="#">Basic Plant</a>
+                    <a href="#">With Pet</a>
+                    <a href="#">Interior Plant</a>
+                    <a href="#">Tool</a>
+                    <a href="#">Plant Note</a>
+                    <a href="#">Contact</a>
+                    <div></div>
+                    <a href="#">Cart</a>
+                    <a href="#">Login</a>
+                </div>
+            </section>
+            <section class="basic-plant">
+                <h1 class="font-80">Basic<br>Plant</h1>
+                <div class="plant-box">
+                    <img class="plant-1" src="https://imgur.com/Wlah9ea.png" alt="">
+                    <div class="plant-box-hover">
+                        <div class="title-box">
+                            <span class="plant-title">산세베리아</span>
+                            <img src="https://imgur.com/iUiOqDZ.png" alt="">
+                        </div>
+                        <div class="line"></div>
+                        <nav>
+                            <div class="plant-tip">
+                                <img src="https://imgur.com/fWkrSFP.png" alt="">
+                                <span>햇빛이 잘 드는 곳에서 키워주세요.</span>
+                            </div>
+                            <div class="plant-tip">
+                                <img src="https://imgur.com/fWkrSFP.png" alt="">
+                                <span>건조에는 강하지만 과습에는 약해요.</span>
+                            </div>
+                            <span class="plant-content">아스파라거스과의 다육식물입니다. 단단한 질감과 생명력이 강해요. 5월부터 7월은 별모양의 흰 꽃이 핍니다. 가드닝이 처음이시라면 추천해요.</span>
+                            <span class="plant-price">18,000원</span>
+                        </nav>
+                        <div class="line"></div>
+                        <div class="box-count">
+                            <span class="box-count__minus"><img src="https://imgur.com/SvJluV1.png" alt=""></span>
+                            <span class="box-count__num">0</span>
+                            <span class="box-count__plus"><img src="https://imgur.com/jGsPxZh.png" alt=""></span>
+                        </div>
+                        <button>Cart</button>
+                    </div>
+                    <img class="plant-2" src="https://imgur.com/PGykMAZ.png" alt="">
+                    <div class="plant-box-hover">
+                        <div class="title-box">
+                            <span class="plant-title">필레아페페</span>
+                            <img id="margin-3" src="https://imgur.com/iUiOqDZ.png" alt="">
+                        </div>
+                        <div class="line"></div>
+                        <nav>
+                            <div class="plant-tip">
+                                <img src="https://imgur.com/fWkrSFP.png" alt="">
+                                <span>햇빛이 잘 드는 창가 또는 거실에서 키워주세요.</span>
+                            </div>
+                            <div class="plant-tip">
+                                <img src="https://imgur.com/IOD8jnh.png" alt="">
+                                <span>겉흙이 마르면 물을 흠뻑 주세요.</span>
+                            </div>
+                            <span class="plant-content">독특한 원형 잎 모양의 물을 좋아하는 식물입니다. 빠르게 성장하며 공기 정화 능력이 뛰어나요. 관리가 쉬워 가드닝이 처음이신 분들에게 추천해요. 수경재배도 가능해요!</span>
+                            <span class="plant-price">15,000원</span>
+                        </nav>
+                        <div class="line"></div>
+                        <div class="box-count">
+                            <span class="box-count__minus"><img src="https://imgur.com/SvJluV1.png" alt=""></span>
+                            <span class="box-count__num">0</span>
+                            <span class="box-count__plus"><img src="https://imgur.com/jGsPxZh.png" alt=""></span>
+                        </div>
+                        <button>Cart</button>
+                    </div>
+                    <img class="plant-3" src="https://imgur.com/73HyV6H.png" alt="">
+                    <div class="plant-box-hover">
+                        <div class="title-box">
+                            <span class="plant-title">테이블야자</span>
+                            <div class="tag-box">
+                                <img src="https://imgur.com/4nCllFg.png" alt="">
+                                <img src="https://imgur.com/iUiOqDZ.png" alt="">
+                            </div>
+                        </div>
+                        <div class="line"></div>
+                        <nav>
+                            <div class="plant-tip">
+                                <img src="https://imgur.com/fWkrSFP.png" alt="">
+                                <span>직사광선은 피하고, 반음지에서 키워주세요.</span>
+                            </div>
+                            <div class="plant-tip">
+                                <img src="https://imgur.com/IOD8jnh.png" alt="">
+                                <span>겉흙이 마르면 물을 흠뻑 주세요.</span>
+                            </div>
+                            <span class="plant-content">실내에서 자주 키우는 인기 있는 관엽식물입니다. 병충해에 강하고, 적당한 빛과 습도에서 잘 자랍니다. 물론 공기 정화 능력도 뛰어나요! 집이나 사무실에 자연스러운 느낌을 원하는 분들에게 추천해요.</span>
+                            <span class="plant-price">63,000원</span>
+                        </nav>
+                        <div class="line"></div>
+                        <div class="box-count">
+                            <span class="box-count__minus"><img src="https://imgur.com/SvJluV1.png" alt=""></span>
+                            <span class="box-count__num">0</span>
+                            <span class="box-count__plus"><img src="https://imgur.com/jGsPxZh.png" alt=""></span>
+                        </div>
+                        <button>Cart</button>
+                    </div>
+                    <img class="plant-4" src="https://imgur.com/i1Mhgey.png" alt="">
+                    <div class="plant-box-hover">
+                        <div class="title-box">
+                            <span class="plant-title">피쉬본 선인장</span>
+                            <img src="https://imgur.com/iUiOqDZ.png" alt="">
+                        </div>
+                        <div class="line"></div>
+                        <nav>
+                            <div class="plant-tip">
+                                <img src="https://imgur.com/fWkrSFP.png" alt="">
+                                <span>직사광선은 피하고, 반양지에서 키워주세요.</span>
+                            </div>
+                            <div class="plant-tip">
+                                <img src="https://imgur.com/IOD8jnh.png" alt="">
+                                <span>겉흙이 마르면 물을 흠뻑 주세요.</span>
+                            </div>
+                            <span class="plant-content">독특한 모양의 잎을 가진 선인장입니다. 하루 2~3시간의 햇빛으로 잘 자라요. 주변 공기가 건조해지지 않도록 조심해주세요. 이국적인 느낌을 원하는 가드너 분들에게 추천해요. </span>
+                            <span class="plant-price">8,700원</span>
+                        </nav>
+                        <div class="line"></div>
+                        <div class="box-count">
+                            <span class="box-count__minus"><img src="https://imgur.com/SvJluV1.png" alt=""></span>
+                            <span class="box-count__num">0</span>
+                            <span class="box-count__plus"><img src="https://imgur.com/jGsPxZh.png" alt=""></span>
+                        </div>
+                        <button>Cart</button>
+                    </div>
+                    <img class="plant-5" src="https://imgur.com/XQuTPcL.png" alt="">
+                    <div class="plant-box-hover">
+                        <div class="title-box">
+                            <span class="plant-title">수채화 고무나무</span>
+                            <img src="https://imgur.com/4nCllFg.png" alt="">
+                        </div>
+                        <div class="line"></div>
+                        <nav>
+                            <div class="plant-tip">
+                                <img src="https://imgur.com/fWkrSFP.png" alt="">
+                                <span>직사광선은 피하고, 반양지에서 키워주세요.</span>
+                            </div>
+                            <div class="plant-tip">
+                                <img src="https://imgur.com/IOD8jnh.png" alt="">
+                                <span>한달에 1-2번 물을 주세요.</span>
+                            </div>
+                            <span class="plant-content">크고 광택있는 잎이 특징인 식물입니다. 강한 생명력과 빠른 성장 속도를 가지고 있어요. 다양한 환경에서도 잘 자라지만 밝은 간접광(반양지)이 적합합니다.</span>
+                            <span class="plant-price">32,000원</span>
+                        </nav>
+                        <div class="line"></div>
+                        <div class="box-count">
+                            <span class="box-count__minus"><img src="https://imgur.com/SvJluV1.png" alt=""></span>
+                            <span class="box-count__num">0</span>
+                            <span class="box-count__plus"><img src="https://imgur.com/jGsPxZh.png" alt=""></span>
+                        </div>
+                        <button>Cart</button>
+                    </div>
+                    <img class="plant-6" src="https://imgur.com/APCVjEe.png" alt="">
+                    <div class="plant-box-hover">
+                        <div class="title-box">
+                            <span class="plant-title">스킨답서스</span>
+                            <img src="https://imgur.com/iUiOqDZ.png" alt="">
+                        </div>
+                        <div class="line"></div>
+                        <nav>
+                            <div class="plant-tip">
+                                <img src="https://imgur.com/fWkrSFP.png" alt="">
+                                <span>직사광선은 피하고, 반양지/반음지에서 키워주세요.</span>
+                            </div>
+                            <div class="plant-tip">
+                                <img src="https://imgur.com/IOD8jnh.png" alt="">
+                                <span>겉흙이 마르면 물을 주세요.</span>
+                            </div>
+                            <span class="plant-content">손쉽게 키우기 좋은 실내 식물을 찾으시면 추천해요. 일산화탄소 제거에 탁월하며, 수경재배 가능한 식물입니다. 식물에 독성이 있어 반려동물에게는 위험해요!</span>
+                            <span class="plant-price">12,000원</span>
+                        </nav>
+                        <div class="line"></div>
+                        <div class="box-count">
+                            <span class="box-count__minus"><img src="https://imgur.com/SvJluV1.png" alt=""></span>
+                            <span class="box-count__num">0</span>
+                            <span class="box-count__plus"><img src="https://imgur.com/jGsPxZh.png" alt=""></span>
+                        </div>
+                        <button>Cart</button>
+                    </div>
+                    <img class="plant-7" src="https://imgur.com/A4BwJxi.png" alt="">
+                    <div class="plant-box-hover">
+                        <div class="title-box">
+                            <span class="plant-title">스파티필름</span>
+                            <img src="https://imgur.com/iUiOqDZ.png" alt="">
+                        </div>
+                        <div class="line"></div>
+                        <nav>
+                            <div class="plant-tip">
+                                <img src="https://imgur.com/fWkrSFP.png" alt="">
+                                <span>직사광선은 피하고, 반양지에서 키워주세요.</span>
+                            </div>
+                            <div class="plant-tip">
+                                <img src="https://imgur.com/IOD8jnh.png" alt="">
+                                <span>겉흙이 마르면 물을 주세요.</span>
+                            </div>
+                            <span class="plant-content">우아한 흰 꽃과 광택 나는 녹색 잎을 가지고 있어요. 따뜻한 곳을 좋아하는 공기 정화 식물입니다.온도와 햇빛의 양이 맞으면 꽃이 펴요. 간편한 관리로도 건강하게 자라요!</span>
+                            <span class="plant-price">22,000원</span>
+                        </nav>
+                        <div class="line"></div>
+                        <div class="box-count">
+                            <span class="box-count__minus"><img src="https://imgur.com/SvJluV1.png" alt=""></span>
+                            <span class="box-count__num">0</span>
+                            <span class="box-count__plus"><img src="https://imgur.com/jGsPxZh.png" alt=""></span>
+                        </div>
+                        <button>Cart</button>
+                    </div>
+                    <img class="plant-8" src="https://imgur.com/ar5cIB2.png" alt="">
+                    <div class="plant-box-hover">
+                        <div class="title-box">
+                            <span class="plant-title">아레카야자</span>
+                            <div class="tag-box">
+                                <img src="https://imgur.com/4nCllFg.png" alt="">
+                                <img src="https://imgur.com/iUiOqDZ.png" alt="">
+                            </div>
+                        </div>
+                        <div class="line"></div>
+                        <nav>
+                            <div class="plant-tip">
+                                <img src="https://imgur.com/fWkrSFP.png" alt="">
+                                <span>직사광선은 피하고, 반양지에서 키워주세요.</span>
+                            </div>
+                            <div class="plant-tip">
+                                <img src="https://imgur.com/IOD8jnh.png" alt="">
+                                <span>겉흙이 마르면 물을 흠뻑 주세요.</span>
+                            </div>
+                            <span class="plant-content">길고 가느다란 잎을 가진 자생력 강한 식물입니다. 세련된 느낌을 좋아하는 분에게 추천해요. 실내 공기를 정화하는 데 도움을 줍니다.</span>
+                            <span class="plant-price">38,000원</span>
+                        </nav>
+                        <div class="line"></div>
+                        <div class="box-count">
+                            <span class="box-count__minus"><img src="https://imgur.com/SvJluV1.png" alt=""></span>
+                            <span class="box-count__num">0</span>
+                            <span class="box-count__plus"><img src="https://imgur.com/jGsPxZh.png" alt=""></span>
+                        </div>
+                        <button>Cart</button>
+                    </div>
+                </div>
+            </section>
+            <section class="footer">
+                <div class="footer-menu">
+                    <ul>
+                        <li><a href="#">Plant</a>
+                        <ul>
+                            <li><a href="#">Basic Plant</a></li>
+                            <li><a href="#">With Pet</a></li>
+                            <li><a href="#">Interior Plant</a></li>
+                            <li><a href="#">Tool</a></li>
+                        </ul>
+                        </li>
+                        <li><a href="#">Plant Note</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><img src="https://imgur.com/10TjDmY.png" alt=""></li>
+                    </ul>
+                </div>
+                <div>
+                    <img src="https://imgur.com/ryaK1aS.png" alt="">
+                    <br>
+                    <span>대표자명: 윤예진</span>
+                    <br>
+                    <span>아메일: awfyuun@gmail.com</span>
+                    <br>
+                    <span>고객센터: 1234-5678</span>
+                    <br>
+                    <span>서울특별시 00구 34-21 00빌딩 234호</span>
+                    <br>
+                    <span>사업자번호: 123-45-6789</span>
+                    <span class="fluffy-touching">Copyright © FluffyTouching. All Rights Reserved.</span>
+                </div>
+            </section>
+        </div>
+</body>
+<script>
+function BoxCount__init() {
+    $(".box-count").each(function (index, node) {
+        const $boxCount = $(node);
+
+        const $btnMinus = $boxCount.find(".box-count__minus");
+        const $btnPlus = $boxCount.find(".box-count__plus");
+        const $num = $boxCount.find(".box-count__num");
+
+        $btnMinus.click(function () {
+        const num = parseInt($num.text());
+        const newNum = num - 1 >= 0 ? num - 1 : 0;
+        $num.text(newNum);
+        });
+
+        $btnPlus.click(function () {
+        const num = parseInt($num.text());
+        const newNum = num + 1 >= 0 ? num + 1 : 0;
+        $num.text(newNum);
+        });
+    });
+}
+BoxCount__init();
+
+//card-hover
+$('[class^="plant-"]').mouseenter(function () {
+    let className = $(this).attr("class").split(" ")[0];
+    let $targetDiv = $(`div.${className}`);
+    
+    // 선택된 요소가 존재하는지 확인 후 실행
+    if ($targetDiv.length && $targetDiv.attr('class')) {
+        let className2 = $targetDiv.attr('class').split(' ')[0];
+        if (className === className2) {
+            $targetDiv.addClass('active');
+        }
+    }
+});
+
+$('[class^="plant-"]').mouseleave(function () {
+    let className = $(this).attr("class").split(" ")[0];
+    let $targetDiv = $(`div.${className}`);
+    
+    // 선택된 요소가 존재하는지 확인 후 실행
+    if ($targetDiv.length && $targetDiv.attr('class')) {
+        let className2 = $targetDiv.attr('class').split(' ')[0];
+        if (className === className2) {
+            $targetDiv.removeClass('active');
+        }
+    }
+});
+
+// Popup
+function Popup__show() {
+    $('.LogIn').addClass('active'); 
+    $('body').css('overflow','hidden');
+}
+
+function Popup__hide() {
+    $('.LogIn').removeClass('active'); 
+    $('body').css('overflow','visible');
+}
+
+
+function Popup__init() {
+    $('.btn_logIn').click(function() {
+    Popup__show();
+});
+
+$('.clear').click(function() {
+    Popup__hide();
+});
+}
+
+Popup__init();
+
+// Popup
+function Popup_2__show() {
+    $('.Cart').addClass('active'); 
+    $('body').css('overflow','hidden');
+}
+
+function Popup_2__hide() {
+    $('.Cart').removeClass('active'); 
+    $('body').css('overflow','visible');
+}
+
+
+function Popup_2__init() {
+$('.btn_cart').click(function() {
+    Popup_2__show();
+});
+
+$('.clear').click(function() {
+    Popup_2__hide();
+});
+}
+
+Popup_2__init();
+</script>
+</html>

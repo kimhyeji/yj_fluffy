@@ -1,0 +1,2465 @@
+/* ------ 노말라이즈 시작 ------ */
+span,
+p,
+a,
+article,
+h1 {
+  font-family: Pretendard Variable;
+}
+
+body {
+  background-color: white;
+}
+
+body,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.font-20 {
+  font-size: 20px;
+  font-family: Pretendard Variable;
+}
+
+.font-80 {
+  font-size: 80px;
+  font-family: Pretendard Variable;
+}
+
+.font-20-g {
+  color: #808080;
+  font-weight: light;
+  font-family: Pretendard Variable;
+  font-size: 20px;
+}
+
+.button {
+  border: none;
+  background-color: transparent;
+}
+/* ------ 노말라이즈 끝 ------ */
+/* ------ 커스텀 시작 ------ */
+@media (max-width: 403px) {
+  .PC {
+    display: none;
+  }
+}
+
+@media (min-width: 402px) {
+  .mobile {
+    display: none;
+  }
+}
+
+.font-20 {
+  font-size: 20px;
+  font-family: Pretendard Variable;
+}
+
+.font-80 {
+  font-size: 80px;
+  font-family: Pretendard Variable;
+}
+
+.font-20-g {
+  color: #808080;
+  font-weight: light;
+  font-family: Pretendard Variable;
+  font-size: 20px;
+}
+
+.button {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+}
+
+.mobile > section {
+  width: 402px;
+}
+
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  height: 110px;
+  padding: 60px;
+}
+
+.flow {
+  display: flex;
+  position: relative;
+  animation: flow-animation 13s linear infinite;
+  transition: 0.3s ease-in-out;
+  white-space: nowrap;
+  width: 100%x;
+  align-items: center;
+}
+
+@keyframes flow-animation {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -750px;
+  }
+}
+/* ------ 커스텀 끝 ------ */
+/* ------ 모바일 반응형 커스텀 시작 ------ */
+.mobile > .header {
+  display: flex;
+  width: 402px;
+  height: 80px;
+  background-color: white;
+  align-items: center;
+  justify-content: space-between;
+}
+.mobile > .header > img:first-child {
+  width: 48px;
+  height: 48px;
+}
+
+.mobile > .header > img:last-child {
+  width: 27px;
+  height: 16px;
+}
+/* ------ 모바일 반응형 커스텀 끝 ------ */
+
+/* ------ 메뉴탭 시작 ------ */
+/* PC */
+nav > a > img {
+  width: 160px;
+  height: 44px;
+  margin-left: 90px;
+}
+
+.header {
+  display: flex;
+  width: 1920px;
+  height: 80px;
+  background-color: white;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #d7d7d7;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.menu-box {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.menu-box > li {
+  width: 123px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-box > li:nth-child(2) {
+  margin: 0 30px;
+}
+
+.menu-box > li:hover {
+  color: #18c876;
+  font-weight: 700px;
+}
+
+.menu-box-2 {
+  display: flex;
+  align-items: center;
+  margin-right: 90px;
+}
+
+.menu-box-2 > li {
+  width: 123px;
+  display: flex;
+  justify-content: center;
+  font-weight: 600;
+}
+
+/* ------ 2차 메뉴 시작 ------ */
+.sub-menu-box {
+  background-color: rgba(255, 255, 255, 0.8);
+  position: absolute;
+  top: 100%;
+  width: 1920px;
+  left: -702px;
+  display: none;
+  z-index: 1;
+  border-top: 1px solid #d7d7d7;
+}
+
+.sub-menu-box > li {
+  display: flex;
+  justify-content: center;
+  padding-top: 29px;
+  font-weight: 400;
+  color: black;
+}
+
+.sub-menu-box > li:nth-child(4) {
+  padding-bottom: 57px;
+}
+
+.sub-menu-box > li:hover {
+  color: #18c876;
+  font-weight: 700px;
+}
+
+.menu-box > li:hover > .sub-menu-box {
+  display: block;
+}
+
+.sub-menu-box > li:after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #18c876;
+  margin-top: 30px;
+  opacity: 0;
+}
+
+.sub-menu-box > li:hover::after {
+  opacity: 1;
+  width: 6%;
+  transition: all 0.3s ease-in;
+}
+/* ------ 2차 메뉴 끝 ------ */
+/* ------ 팝업 시작 ------ */
+
+body.popup-active {
+  overflow: hidden;
+}
+
+.bg {
+  width: 1920px;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.bg .popup,
+.bg .popup-cart {
+  width: 1000px;
+  height: 900px;
+  background-color: white;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  border-radius: 40px;
+  transform: translateY(2.5%);
+}
+
+.bg .popup div:first-child {
+  width: 1000px;
+  height: 20px;
+  display: flex;
+  justify-content: flex-end;
+  margin: 48px 0 92px 0;
+}
+
+.bg .popup a > img {
+  width: 20px;
+  height: 20px;
+  margin-right: 48px;
+}
+
+.bg .popup img {
+  width: 239px;
+  margin-bottom: 39px;
+  display: flex;
+  justify-self: center;
+}
+
+.bg .popup > div:last-child {
+  width: 375px;
+  height: 580px;
+  margin: 0 auto;
+}
+
+.bg .popup > span {
+  font-size: 18px;
+  line-height: 28px;
+  display: inline-block;
+  margin-bottom: 48px;
+}
+
+.bg .popup div > span {
+  font-size: 18px;
+  font-weight: regular;
+  color: #18c876;
+}
+
+.bg .popup div input {
+  border-radius: 15px;
+  border-color: #d7d7d7;
+  width: 369px;
+  height: 60px;
+  margin-top: 18px;
+  margin-bottom: 40px;
+}
+
+.bg .popup button {
+  width: 375px;
+  height: 61px;
+  border-radius: 15px;
+  border: none;
+  background-color: #18c876;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  margin-top: 52px;
+}
+
+.bg .popup button:last-child {
+  width: 375px;
+  height: 61px;
+  border-radius: 15px;
+  border: 1px solid #808080;
+  background-color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  color: #393939;
+  margin-top: 13px;
+  margin-bottom: 160px;
+}
+
+.LogIn {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s, visibility 0.3s;
+  z-index: 5;
+  top: 0%;
+  position: absolute;
+}
+
+.LogIn.active {
+  opacity: 1;
+  visibility: visible;
+  width: 1920px;
+  height: 100vh;
+  display: block;
+  z-index: 1001;
+}
+
+html .LogIn {
+  overflow: hidden;
+}
+/* Cart 팝업 */
+.popup-cart {
+  width: 1000px;
+  height: 900px;
+  background-color: white;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  border-radius: 40px;
+}
+
+.popup-cart div:first-child {
+  width: 1000px;
+  height: 20px;
+  display: flex;
+  justify-content: flex-end;
+  margin: 48px 0 30px 0;
+}
+
+.popup-cart a > img {
+  width: 20px;
+  height: 20px;
+  margin-right: 48px;
+}
+
+.popup-cart div:nth-child(2) {
+  width: 1000px;
+  height: 35px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 54px;
+}
+
+.popup-cart div:nth-child(2) h1 {
+  font-size: 48px;
+  margin-left: 48px;
+}
+
+.popup-cart div:nth-child(3) {
+  width: 860px;
+  height: 60px;
+  border: 1px solid #d7d7d7;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+}
+
+.popup-cart div:nth-child(3) > span {
+  font-size: 18px;
+  margin-right: 41px;
+}
+
+.popup-cart div:nth-child(3) > input {
+  border: none;
+  font-size: 18px;
+  flex-grow: 1;
+  height: calc(100% - 2px);
+}
+
+.popup-cart div:nth-child(3) > button {
+  border: none;
+  background-color: white;
+  margin-left: 10px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.popup-cart .list {
+  width: 860px;
+  height: 480px;
+  border-bottom: 1px solid #d7d7d7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-cart .list > button {
+  border: none;
+  background-color: white;
+  color: #d7d7d7;
+  transform: translateX(830%) translateY(-1100%);
+}
+
+.popup-cart .list > span {
+  font-size: 24px;
+  color: #808080;
+}
+
+.popup-cart .btn_box button {
+  width: 375px;
+  height: 61px;
+  border-radius: 15px;
+  border: none;
+  background-color: #d7d7d7;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  margin-top: 52px;
+}
+
+.popup-cart .btn_box button:last-child {
+  width: 375px;
+  height: 61px;
+  border-radius: 15px;
+  border: none;
+  background-color: #18c876;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  margin-top: 52px;
+  margin-left: 14px;
+}
+
+.Cart {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s, visibility 0.3s;
+  z-index: 5;
+  top: 0%;
+  position: absolute;
+}
+
+.Cart.active {
+  opacity: 1;
+  visibility: visible;
+  width: 1920px;
+  height: 100vh;
+  display: block;
+  z-index: 1001;
+}
+
+html .Cart {
+  overflow: hidden;
+}
+/* ------ 팝업 끝 ------ */
+
+/* Mobile */
+.mobile {
+  width: 402px;
+}
+.mobile > .header {
+  display: flex;
+  width: 402px;
+  height: 80px;
+  justify-content: center;
+  border-bottom: 1px solid #d7d7d7;
+}
+
+.mobile > .header > div {
+  width: 362px;
+  height: 48px;
+  display: flex;
+  justify-content: space-between;
+}
+.mobile > .header img:first-child,
+.mobile > .header img:last-child {
+  width: 48px;
+  height: 48px;
+}
+/* ------ 모바일 사이드바 시작 ------ */
+.mobile .header {
+  display: flex;
+  width: 402px;
+  height: 80px;
+  justify-content: center;
+  border-bottom: 1px solid #d7d7d7;
+}
+
+.mobile .header > div {
+  width: 362px;
+  height: 48px;
+  display: flex;
+  justify-content: space-between;
+}
+.mobile .header img:first-child,
+.mobile > .header img:last-child {
+  width: 48px;
+  height: 48px;
+}
+
+.mobile .menu {
+  width: 362px;
+  margin-top: 90px;
+}
+
+.mobile .menu a {
+  display: block;
+  text-align: center;
+  padding-bottom: 30px;
+  font-size: 24px;
+  width: 137px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.mobile .menu > a:first-child {
+  padding-top: 90px;
+}
+
+.mobile .menu div {
+  border: 1px solid #d7d7d7;
+  margin: 50px 20px 50px 20px;
+  width: 362px;
+  display: flex;
+  justify-self: center;
+}
+
+.mobile .header div .clear {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-self: center;
+  padding: 10px;
+}
+
+.mobile .menu a:nth-child(9),
+.mobile .menu a:nth-child(10) {
+  color: #808080;
+}
+.mobile .menu a:hover {
+  color: #18c876;
+}
+
+.mobile .menu a:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 0%;
+  height: 2px;
+  background-color: #18c876;
+  margin-top: 35px;
+  opacity: 0;
+}
+
+.mobile .menu a:hover::after {
+  opacity: 1;
+  transition: all 0.3s ease-in;
+}
+
+.mobile-sideBar {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s, visibility 0.3s;
+  z-index: 5;
+  top: 0;
+  position: fixed;
+  background-color: white;
+  height: 100vh;
+}
+
+body.mobile-sideBar.active {
+  overflow: hidden;
+}
+
+.mobile-sideBar.active {
+  opacity: 1;
+  visibility: visible;
+  width: 1920px;
+  height: 100vh;
+  display: block;
+  z-index: 1001;
+}
+
+.mobile-sideBar .menu {
+  height: 100%;
+  margin-left: 20px;
+}
+
+html .mobile-sideBar {
+  overflow: hidden;
+}
+/* ------ 메뉴탭 끝 ------ */
+
+/* ------ Footer 시작 ------ */
+/* PC */
+.footer {
+  background-color: black;
+  width: 1920px;
+  height: 400px;
+  display: flex;
+  position: relative;
+  margin-top: 0px;
+}
+
+.footer > div img {
+  width: 63px;
+  margin-bottom: 30px;
+}
+
+.footer > div:nth-child(1) {
+  width: 681px;
+  height: 154px;
+  margin-left: 90px;
+  margin-top: 83px;
+  margin-right: 630px;
+}
+
+.footer span {
+  font-weight: thin;
+  font-size: 18px;
+}
+
+.footer-menu {
+  width: 429px;
+  height: 159px;
+  margin-top: 80px;
+}
+
+.footer-menu > ul {
+  display: flex;
+}
+
+.footer-menu > ul > li {
+  font-size: 24px;
+  font-weight: light;
+  width: 429px;
+  height: 33px;
+}
+
+.footer-menu > ul > li > a {
+  width: 123px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.footer-menu > ul > li li {
+  font-size: 18px;
+  font-weight: light;
+  display: flex;
+  justify-content: center;
+  width: 123px;
+  margin-top: 10px;
+}
+
+.footer-menu > ul > li > ul {
+  display: block;
+}
+
+.footer > div > span,
+.footer-menu a {
+  color: white;
+}
+
+.footer > .sns {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-right: 90px;
+  margin-bottom: 55px;
+  width: 57px;
+  height: 57px;
+}
+
+.footer > div > .fluffy-touching {
+  display: inline-block;
+  margin-top: 70px;
+  font-weight: bold;
+}
+/* ------ 모바일 ------ */
+.mobile > .footer {
+  width: 402px;
+  height: 795px;
+  display: block;
+  margin-top: 40px;
+}
+
+.mobile .footer-menu {
+  display: flex;
+  margin-top: 60px;
+}
+
+.mobile .footer-menu > ul {
+  display: block;
+}
+
+.mobile .footer-menu > ul > li:first-child {
+  margin-top: 60px;
+  margin-bottom: 30px;
+  height: 164px;
+}
+
+.mobile .footer-menu > ul > li {
+  font-size: 24px;
+  font-weight: light;
+  width: 125px;
+  height: 58px;
+}
+
+.mobile .footer > div ul > li > img {
+  width: 58px;
+  display: flex;
+  justify-self: center;
+}
+
+.mobile .footer > div:nth-child(1) {
+  width: 125px;
+  height: 368px;
+  margin-left: 138px;
+}
+
+.mobile .footer > div:nth-child(2) {
+  width: 290px;
+  margin-top: 170px;
+  margin-left: 20px;
+}
+
+.mobile .footer span {
+  font-size: 12px;
+}
+
+.mobile .footer > div > .fluffy-touching {
+  margin-top: 30px;
+  font-weight: bold;
+}
+/* ------ Footer 끝 ------ */
+
+/* ------ main-image 시작 ------ */
+/* PC */
+.main-image {
+  position: relative;
+}
+
+.main-image > img {
+  width: 1920px;
+  height: 880px;
+}
+
+.main-image > span,
+p {
+  font-size: 62px;
+}
+
+.main-image > span {
+  color: white;
+  position: absolute;
+  top: 55%;
+  left: 0;
+  margin-left: 90px;
+}
+
+.main-image > p {
+  position: absolute;
+  top: 56.4%;
+  margin-left: 268px;
+  color: #548c4c;
+  font-weight: bold;
+}
+/* ------ main-image 끝 ------ */
+/* ------ Brand-introduce 시작 ------ */
+.brand-introduce {
+  display: flex;
+  align-items: center;
+}
+
+.brand-introduce > div {
+  width: 940px;
+  height: 350px;
+  margin-top: 213px;
+  margin-left: 90px;
+}
+
+.brand-introduce > div > span {
+  font-size: 36px;
+  font-weight: semibold;
+}
+
+.brand-introduce > div > article {
+  font-size: 24px;
+  line-height: 35px;
+  margin-top: 40px;
+}
+
+.brand-introduce > img {
+  width: 575px;
+  height: 277px;
+  display: flex;
+  margin-top: 239px;
+  margin-left: 152px;
+}
+/* ------ Brand-introduce 끝 ------ */
+/* ------ category 시작 ------ */
+.category {
+  width: 1920px;
+  display: flex;
+  justify-content: center;
+}
+
+.category > ul {
+  display: flex;
+  margin-top: 375px;
+  width: 1677px;
+  height: 552px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.category-img img {
+  widht: 369px;
+  height: 458px;
+  cursor: pointer;
+}
+
+.category-img {
+  position: relative;
+}
+
+.category-hover {
+  display: flex;
+  position: relative;
+  margin-top: 375px;
+  width: 1677px;
+  height: 552px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.category-hover img {
+  widht: 369px;
+  height: 458px;
+  cursor: pointer;
+}
+
+.hover {
+  position: absolute;
+  top: 8.2%;
+  left: 0%;
+  visibility: hidden;
+}
+
+.hover-2 {
+  position: absolute;
+  top: 8.2%;
+  right: 41.2%;
+  visibility: hidden;
+}
+
+.hover-3 {
+  position: absolute;
+  top: 8.2%;
+  right: 4.7%;
+  visibility: hidden;
+}
+
+.category:hover .hover {
+  visibility: visible;
+}
+
+.category:hover .hover-2 {
+  visibility: visible;
+}
+
+.category:hover .hover-3 {
+  visibility: visible;
+  transform: rotate(-12deg);
+  transition: transform 0.3s ease-in-out;
+}
+
+.category-img:hover > li img {
+  transform: rotate(17deg);
+  transition: transform 0.3s ease-in-out;
+}
+
+.category-img:hover > li:nth-child(5) img {
+  transform: rotate(-12deg);
+  transition: transform 0.3s ease-in-out;
+}
+
+.category-img > li > a > span {
+  position: absolute;
+  top: 42%;
+  left: 6.2%;
+  font-size: 24px;
+  color: white;
+  text-align: center;
+  visibility: hidden;
+}
+
+.category-img > li > a > button {
+  position: absolute;
+  top: 58%;
+  left: 9.2%;
+  font-size: 18px;
+  border-color: white;
+  border-radius: 10px;
+  width: 102px;
+  height: 26px;
+  background-color: transparent;
+  color: white;
+  visibility: hidden;
+}
+
+.category:hover span,
+.category:hover button {
+  visibility: visible;
+  transition-delay: 0.5s ease-in;
+}
+
+.category-img .text-2 {
+  position: absolute;
+  top: 42%;
+  left: 39.8%;
+  font-size: 24px;
+  color: white;
+  text-align: center;
+  visibility: hidden;
+}
+
+.category-img .text-3 {
+  position: absolute;
+  top: 42%;
+  left: 76.5%;
+  font-size: 24px;
+  color: white;
+  text-align: center;
+  visibility: hidden;
+}
+
+.category-img .button-2 {
+  position: absolute;
+  top: 58%;
+  left: 43.5%;
+  font-size: 18px;
+  border-color: white;
+  border-radius: 10px;
+  width: 102px;
+  height: 26px;
+  background-color: transparent;
+  color: white;
+  visibility: hidden;
+}
+
+.category-img .button-3 {
+  position: absolute;
+  top: 58%;
+  left: 79%;
+  font-size: 18px;
+  border-color: white;
+  border-radius: 10px;
+  width: 102px;
+  height: 26px;
+  background-color: transparent;
+  color: white;
+  visibility: hidden;
+}
+/* ------ 모바일 category 시작 ------ */
+.mobile > .category {
+  height: 400px;
+  margin-top: 150px;
+}
+
+.mobile > .category img {
+  width: 120px;
+  height: 140px;
+  margin-bottom: 45px;
+  display: flex;
+  transform: translatex(-5%);
+}
+
+.mobile > .category a {
+  width: 200px;
+  height: 360px;
+  margin: 0 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.mobile > .category a span {
+  font-size: 16px;
+}
+
+.mobile > .category button {
+  border: 1px solid black;
+  background-color: white;
+  border-radius: 28px;
+  width: 90px;
+  height: 28px;
+  margin-top: 18px;
+  cursor: pointer;
+}
+
+.mobile > .category button:hover {
+  border: 1px solid #18c876;
+  color: #18c876;
+  transform: scale(1.1);
+  transition: all 0.9s ease;
+}
+
+.slick-active.slick-center {
+  transform: scale(1.3);
+  transition: all 0.9s ease;
+  background: transparent;
+  visibility: visible;
+}
+
+.slick-slide:not(.slick-center) span,
+.slick-slide:not(.slick-center) button {
+  transition: all 0.1s ease-in-out;
+  visibility: hidden;
+  pointer-events: none;
+}
+/* ------ 모바일 category 끝 ------ */
+/* ------ category 끝 ------ */
+
+/* ------ care-service 시작 ------ */
+.care-service {
+  width: 1920px;
+}
+
+.care-service > h1 {
+  display: flex;
+  justify-content: center;
+  margin-top: 333px;
+  margin-bottom: 0px;
+  font-size: 80px;
+  font-weight: bold;
+}
+
+.care-service > span {
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 61px;
+}
+
+.care-service > button {
+  display: flex;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.care-service button > img {
+  width: 120px;
+  height: 120px;
+}
+
+.care-service > img {
+  display: flex;
+  margin: 0 auto;
+  width: 781px;
+  height: 467px;
+  margin-bottom: 175px;
+}
+
+.care-service container > div > span {
+  font-size: 62px;
+  font-weight: bold;
+  color: #d7d7d7;
+  margin: 0 20px;
+}
+
+.care-service container > div > img {
+  width: 64px;
+  height: 64px;
+}
+
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  height: 110px;
+  padding: 60px;
+}
+
+.flow {
+  display: flex;
+  position: relative;
+  animation: flow-animation 13s linear infinite;
+  transition: 0.3s ease-in-out;
+  white-space: nowrap;
+  width: 100%x;
+}
+
+@keyframes flow-animation {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -750px;
+  }
+}
+/* ------ care-service 끝 ------ */
+/* ------ how-to 시작 ------ */
+.PC .how-to {
+  position: relative;
+  width: 1920px;
+  height: 2160px;
+}
+
+.PC .how-to > img {
+  width: 1920px;
+  height: 2160px;
+}
+
+.how-to > .text {
+  width: 100%;
+  position: absolute;
+  top: 65%;
+  margin-left: 90px;
+}
+
+.text > span {
+  font-size: 48px;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 25px;
+}
+
+.text > button > img {
+  width: 46px;
+  height: 46px;
+  cursor: pointer;
+}
+
+.image-block {
+  display: grid;
+  grid-template-columns: 660px auto;
+  grid-template-rows: 411px 411px;
+  align-items: start;
+  position: absolute;
+  gap: 20px;
+  top: 55%;
+  left: 40%;
+}
+
+.image-block img {
+  border-radius: 40px;
+  object-fit: cover;
+  margin: 0;
+}
+
+.how-to div > img:nth-child(1),
+img:nth-child(2) {
+  margin-bottom: 20px;
+}
+
+.how-to div > img:nth-child(3),
+img:nth-child(4) {
+  margin-bottom: 20px;
+}
+
+.how-to div > img:nth-child(1),
+img:nth-child(4) {
+  width: 660px;
+  height: 411px;
+}
+
+.how-to div > img:nth-child(2),
+img:nth-child(3) {
+  width: 362px;
+  height: 411px;
+}
+
+.swiper {
+  width: 507px;
+  height: 648px;
+  position: relative;
+}
+
+.swiper-wrapper {
+  position: absolute;
+  top: 10%;
+  right: -42%;
+  margin-right: 90px;
+  height: 100%;
+}
+
+.swiper-slide {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 40px;
+  color: #fff;
+  text-align: center;
+}
+
+.swiper-slide:nth-child(1n) {
+  background-color: #204f39;
+}
+
+.swiper-slide:nth-child(2n) {
+  background-color: #64edad;
+}
+
+.swiper-slide:nth-child(3n) {
+  background-color: #204f39;
+}
+
+.swiper-slide:nth-child(4n) {
+  background-color: #ffff;
+}
+
+.how-to > .swiper-position {
+  position: absolute;
+  top: 15%;
+  right: 22%;
+}
+
+.how-to .swiper-wrapper p {
+  font-size: 36px;
+  margin-top: 188px;
+  display: block;
+}
+
+.how-to .swiper-wrapper span {
+  position: relative;
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 50px;
+}
+
+.how-to .swiper-slide:nth-child(4) > span,
+.how-to .swiper-slide:nth-child(4) > p {
+  color: black;
+}
+/* ------ how-to 끝 ------ */
+/* ------ plant-note 시작 ------ */
+.PC .plant-note {
+  margin-top: 171px;
+  margin-bottom: 230px;
+  width: 1920px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.PC .plant-note > .plant-note-box {
+  margin-left: 294px;
+}
+
+.PC .plant-note > div > container > div {
+  width: 400px;
+  height: 400px;
+  border: 2px solid;
+  background-color: white;
+  border-color: #e1e1e1;
+  cursor: pointer;
+}
+
+.PC .plant-note > div > container {
+  display: flex;
+  width: 1250px;
+  height: 400px;
+}
+
+.PC .side-margin {
+  margin: 0 25px;
+}
+
+.plant-note div > img {
+  width: 26px;
+  margin-left: 40px;
+  margin-top: 27px;
+}
+
+.PC > .plant-note div > span {
+  font-size: 24px;
+  font-weight: bold;
+  display: block;
+  margin: 63px 0px 261px 40px;
+}
+
+.PC > .plant-note div > p {
+  font-size: 16px;
+  font-weight: light;
+  margin-left: 40px;
+}
+
+.container-margin {
+  margin: 23px 0px 23px 0px;
+}
+
+.plant-note div > a {
+  font-size: 24px;
+  font-weight: bold;
+  display: block;
+  margin: 10px 0px 261px 40px;
+}
+
+.plant-note > .plant-note-box div:hover {
+  border-color: #18c876;
+}
+
+.plant-note > span {
+  width: 126px;
+  height: 98px;
+  font-size: 48px;
+  font-weight: bold;
+  line-height: 50px;
+  display: flex;
+  margin-left: 90px;
+  justify-content: center;
+}
+
+.plant-note > button > img {
+  width: 46px;
+  height: 46px;
+  margin-top: 50px;
+  cursor: pointer;
+}
+/* ------ plant-note 끝 ------ */
+
+/* 모바일 */
+/* ------ 모바일 메인이미지 시작 ------ */
+.mobile > .main-image > span,
+p {
+  font-size: 60px;
+}
+
+.mobile > .main-image > span {
+  color: white;
+  position: absolute;
+  top: 15%;
+  left: 0;
+  margin-left: 20px;
+}
+
+.mobile > .main-image > p {
+  position: absolute;
+  top: 40.5%;
+  margin-left: 20px;
+  color: #548c4c;
+  font-weight: bold;
+}
+/* ------ 모바일 메인이미지 끝 ------ */
+/* ------ 모바일 Brand-introduce 시작 ------ */
+.mobile > .brand-introduce {
+  display: block;
+}
+
+.mobile > .brand-introduce > div {
+  width: 362px;
+  height: 368px;
+  margin-top: 50px;
+  margin-left: 20px;
+}
+
+.mobile > .brand-introduce > div > span {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.mobile > .brand-introduce > div > article {
+  font-size: 16px;
+  line-height: 30px;
+  margin-top: 14px;
+}
+
+.mobile > .brand-introduce > img {
+  width: 254px;
+  height: 124px;
+  margin-top: 59px;
+  margin-left: 74px;
+}
+/* ------ 모바일 Brand-introduce 끝 ------ */
+/* ------ 모바일 category 시작 ------ */
+.mobile > .category {
+  height: 400px;
+  margin-top: 150px;
+}
+
+.mobile > .category img {
+  width: 120px;
+  height: 140px;
+  margin-bottom: 45px;
+  display: flex;
+  transform: translatex(-5%);
+}
+
+.mobile > .category a {
+  width: 200px;
+  height: 360px;
+  margin: 0 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.mobile > .category a span {
+  font-size: 16px;
+}
+
+.mobile > .category button {
+  border: 1px solid black;
+  background-color: white;
+  border-radius: 28px;
+  width: 90px;
+  height: 28px;
+  margin-top: 18px;
+  cursor: pointer;
+}
+
+.mobile > .category > a > button:hover {
+  border: 1px solid #18c876;
+  color: #18c876;
+  transform: scale(1.1);
+  transition: all 0.9s ease;
+}
+
+.slick-active.slick-center {
+  transform: scale(1.3);
+  transition: all 0.9s ease;
+  background: transparent;
+  visibility: visible;
+}
+
+.slick-slide:not(.slick-center) span,
+.slick-slide:not(.slick-center) button {
+  transition: all 0.1s ease-in-out;
+  visibility: hidden;
+  pointer-events: none;
+}
+/* ------ 모바일 category 끝 ------ */
+/* ------ 모바일 care-service 시작 ------ */
+.mobile > .care-service > h1 {
+  display: flex;
+  justify-content: center;
+  margin-top: 83px;
+  margin-bottom: 15px;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.mobile > .care-service > span {
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.mobile > .care-service > button {
+  display: flex;
+  margin: 0 auto;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.mobile > .care-service button > img {
+  width: 70px;
+  height: 70px;
+}
+
+.mobile > .care-service > img {
+  display: flex;
+  margin: 0 auto;
+  width: 323px;
+  height: 191px;
+}
+
+.mobile > .care-service container > div > span {
+  font-size: 30px;
+  font-weight: bold;
+  color: #d7d7d7;
+  margin: 0 8px;
+}
+
+.mobile > .care-service container > div > img {
+  width: 20px;
+  height: 20px;
+}
+
+.mobile .marquee {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  height: 57px;
+  padding: 57px;
+}
+/* ------ 모바일 care-service 끝 ------ */
+/* ------ 모바일 how-to 시작 ------ */
+.mobile > .how-to {
+  position: relative;
+  width: 402px;
+  height: 1400px;
+}
+
+.mobile > .how-to > img {
+  width: 402px;
+  height: 941px;
+}
+
+.mobile > .how-to > .text {
+  position: absolute;
+  top: 65%;
+  margin-left: 20px;
+}
+
+.mobile .text > span {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.mobile .text > button {
+  display: flex;
+  align-items: center;
+}
+
+.mobile .text > button > img {
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.mobile > .how-to container {
+  position: absolute;
+  top: 78%;
+  left: 5%;
+}
+
+.mobile > .how-to container > div {
+  width: 370px;
+  height: 291px;
+  display: inline-block;
+}
+
+.mobile > .how-to div > img:nth-child(1),
+.mobile > .how-to div > img:nth-child(3) {
+  margin-right: 5px;
+}
+
+.mobile > .how-to div > img:nth-child(1),
+.mobile > .how-to div > img:nth-child(2) {
+  margin-bottom: 5px;
+}
+
+.mobile > .how-to div > img:nth-child(1),
+.mobile > .how-to div > img:nth-child(4) {
+  width: 225px;
+  height: 140px;
+}
+
+.mobile > .how-to div > img:nth-child(2),
+.mobile > .how-to div > img:nth-child(3) {
+  width: 126px;
+  height: 140px;
+}
+
+.mobile > .how-to div > img {
+  border-radius: 20px;
+}
+
+.mobile .swiper {
+  width: 291px;
+  height: 372px;
+  position: relative;
+}
+
+.mobile .swiper-wrapper {
+  position: absolute;
+  top: 10%;
+  right: -42%;
+  margin-right: 30px;
+}
+
+.mobile .swiper-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 40px;
+  color: #fff;
+  text-align: center;
+}
+
+.mobile .how-to > .swiper-position {
+  position: absolute;
+  top: 2%;
+  right: 42%;
+}
+
+.mobile .how-to .swiper-wrapper p {
+  font-size: 18px;
+}
+
+.mobile .how-to .swiper-wrapper span {
+  font-size: 18px;
+  line-height: 30px;
+}
+/* ------ 모바일 how-to 끝 ------ */
+/* ------ 모바일 plant-note 시작 ------ */
+.mobile .plant-note {
+  width: 402px;
+  display: block;
+  margin-top: 70px;
+}
+
+.mobile > .plant-note > .text {
+  margin-left: 20px;
+}
+
+.mobile > .plant-note span {
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 32px;
+}
+
+.mobile > .plant-note > .plant-note-box {
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 35px;
+}
+
+.mobile > .plant-note > div > div {
+  width: 362px;
+  height: 220px;
+  border: 1px solid #e1e1e1;
+  background-color: white;
+  cursor: pointer;
+}
+
+.mobile > .plant-note > .plant-note-box a {
+  font-size: 24px;
+  font-weight: bold;
+  display: block;
+  margin: 10px 0px 57px 35px;
+}
+
+.mobile > .plant-note > .plant-note-box span {
+  font-size: 24px;
+  font-weight: bold;
+  display: block;
+  margin-top: 71px;
+  margin-left: 35px;
+}
+
+.mobile > .plant-note > .plant-note-box p {
+  font-size: 16px;
+  margin-left: 35px;
+}
+
+.mobile > .plant-note > .plant-note-box img {
+  width: 26px;
+  margin-left: 35px;
+  margin-top: 35px;
+}
+
+.mobile > .plant-note > div .side-margin {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+/* ------ 모바일 plant-note 끝 ------ */
+
+/* ------ Basic Plant 시작 ------ */
+/* PC */
+.PC .basic-plant {
+  max-width: 1920px;
+  width: 100%;
+  height: 2419px;
+  background-color: white;
+  justify-content: center;
+  position: relative;
+}
+
+.basic-plant > h1 {
+  display: flex;
+  justify-content: center;
+  margin-top: 119px;
+}
+
+.PC .basic-plant img {
+  width: 404px;
+  height: 600px;
+}
+
+.basic-plant > div > .container {
+  display: block;
+  margin-bottom: 50px;
+}
+
+.PC .basic-plant > div > .container .side-margin {
+  margin: 0 72px;
+}
+
+.basic-plant > div {
+  justify-self: center;
+}
+
+.plant-box-hover {
+  width: 404px;
+  height: 600px;
+  background-color: #1d2a24;
+}
+
+.plant-box-hover span {
+  color: white;
+}
+
+.plant-title {
+  font-size: 36px;
+  font-weight: bold;
+  height: 47px;
+  display: flex;
+}
+
+.plant-box-hover > .line {
+  width: 404px;
+  height: 1px;
+  background-color: #3b4540;
+  margin-top: 18px;
+}
+
+.plant-box-hover > nav {
+  display: flex;
+  justify-self: center;
+  align-items: start;
+  background-color: #1d2a24;
+  width: 334px;
+  height: 280px;
+  margin-top: 20px;
+  flex-direction: column;
+}
+
+.plant-tip {
+  display: flex;
+  align-items: center; /* 세로 정렬 */
+  font-size: 16px;
+  font-weight: 300;
+  margin-bottom: 16px;
+}
+
+.plant-tip img {
+  width: 18px !important;
+  height: 18px !important;
+  margin-right: 10px;
+  flex-shrink: 0;
+  object-fit: contain;
+  display: block;
+}
+
+.plant-tip > span {
+  font-size: 16px;
+}
+
+.plant-content {
+  font-size: 18px;
+  font-weight: light;
+  line-height: 28px;
+  padding-top: 8px;
+  height: 140px;
+}
+
+.plant-price {
+  font-size: 24px;
+  font-weight: light;
+  display: flex;
+  align-self: end;
+  margin-top: 32px;
+}
+
+.plant-box-hover > .title-box > .tag-box > img,
+.plant-box-hover > .title-box > img {
+  width: 33px;
+  height: 33px;
+  padding-top: 5px;
+  margin-left: 10px;
+}
+
+.plant-box-hover > .title-box {
+  width: 325px;
+  height: 43px;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  margin-top: 48px;
+  margin-left: 38px;
+}
+
+.plant-box-hover .tag-box {
+  width: 119px;
+  height: 43px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.plant-box-hover .tag-box img {
+  margin: 0;
+  padding: 0;
+  display: block;
+  width: auto;
+  height: 100%;
+}
+
+.plant-box-hover > button {
+  width: 332px;
+  height: 60px;
+  background-color: white;
+  border-radius: 10px;
+  border: none;
+  margin-top: 18px;
+  margin-left: 36px;
+  font-size: 24px;
+  color: #808080;
+}
+
+.plant-box-hover > .box-count {
+  display: flex;
+  align-items: center;
+  width: 402px;
+  height: 30px;
+  justify-content: space-around;
+  margin-top: 34px;
+}
+
+.box-count > .box-count__minus > img,
+.box-count > .box-count__plus > img {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.plant-box-hover > .box-count__num {
+  font-size: 24px;
+}
+
+/* hover */
+.basic-plant > .plant-1 {
+  position: absolute;
+  top: 6.7%;
+  left: 13.6%;
+  visibility: hidden;
+}
+
+.basic-plant > .plant-2 {
+  position: absolute;
+  top: 6.7%;
+  left: 38.9%;
+  visibility: hidden;
+}
+
+.basic-plant > .plant-3 {
+  position: absolute;
+  top: 6.6%;
+  left: 64.1%;
+  visibility: hidden;
+}
+
+.basic-plant > .plant-4 {
+  position: absolute;
+  top: 33.7%;
+  left: 13.6%;
+  visibility: hidden;
+}
+
+.basic-plant > .plant-5 {
+  position: absolute;
+  top: 33.7%;
+  left: 38.9%;
+  visibility: hidden;
+}
+
+.basic-plant > .plant-6 {
+  position: absolute;
+  top: 33.7%;
+  left: 64.1%;
+  visibility: hidden;
+}
+
+.basic-plant > .plant-7 {
+  position: absolute;
+  top: 60.7%;
+  left: 13.6%;
+  visibility: hidden;
+}
+
+.basic-plant > .plant-8 {
+  position: absolute;
+  top: 60.7%;
+  left: 38.9%;
+  visibility: hidden;
+}
+
+div.plant-1.active,
+div.plant-2.active,
+div.plant-3.active,
+div.plant-4.active,
+div.plant-5.active,
+div.plant-6.active,
+div.plant-7.active,
+div.plant-8.active {
+  visibility: visible;
+}
+
+/* 모바일 */
+.mobile > .basic-plant {
+  width: 402px;
+  height: auto;
+  background-color: white;
+  flex-direction: column;
+}
+
+.mobile > .basic-plant > h1 {
+  justify-content: flex-start;
+  margin-top: 180px;
+  margin-left: 20px;
+  font-size: 48px;
+  line-height: 38px;
+}
+
+.mobile > .basic-plant > .plant-box {
+  width: 402px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.mobile > .basic-plant > .plant-box > img {
+  width: 402px;
+  height: 220px;
+}
+
+.mobile .plant-box-hover {
+  margin-bottom: 61px;
+}
+/* ------ Basic Plant 끝 ------ */
+
+/* ------ Menu Plant Note 시작 ------ */
+/* PC */
+.menu-plant-note {
+  width: 1920px;
+  height: 1734px;
+  background-color: white;
+  justify-content: center;
+}
+
+.menu-plant-note > h1 {
+  display: flex;
+  justify-content: center;
+  margin-top: 180px;
+}
+
+.menu-plant-note > container > div {
+  width: 400px;
+  height: 400px;
+  border: 2px solid;
+  background-color: white;
+  border-color: #e1e1e1;
+}
+
+.menu-plant-note > container {
+  display: flex;
+  width: 1250px;
+  height: 400px;
+  justify-content: flex-start;
+  margin-left: 335px;
+}
+
+.PC .side-margin {
+  margin: 0 25px;
+}
+
+.menu-plant-note div > img {
+  width: 26px;
+  margin-left: 40px;
+  margin-top: 27px;
+}
+
+.PC .menu-plant-note div > span {
+  font-size: 24px;
+  font-weight: bold;
+  display: block;
+  margin: 63px 0px 261px 40px;
+}
+
+.PC .menu-plant-note div > p {
+  font-size: 16px;
+  font-weight: light;
+  margin-left: 40px;
+}
+
+.container-margin {
+  margin: 23px 0px 23px 0px;
+}
+
+.menu-plant-note div > a {
+  font-size: 24px;
+  font-weight: bold;
+  display: block;
+  margin: 10px 0px 261px 40px;
+}
+
+.PC .menu-plant-note div:hover,
+.mobile .menu-plant-note div:hover {
+  border-color: #18c876;
+}
+/* ------ Plant Note-article 시작 ------ */
+.PC .article {
+  width: 1481px;
+  margin: 0 auto;
+}
+
+.PC .article > .article-title {
+  border-bottom: 1px solid #18c876;
+  margin-bottom: 50px;
+}
+
+.PC .article > .article-title > h1 {
+  display: flex;
+  justify-content: center;
+}
+
+.article > .article-title > p {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 18px;
+}
+
+.PC .article > .article-content > img {
+  width: 1488px;
+  height: 597px;
+  border-radius: 20px;
+  margin-bottom: 70px;
+}
+
+.article > .article-content > article {
+  font-size: 28px;
+  line-height: 48px;
+  margin-top: 10px;
+  margin-bottom: 26px;
+}
+
+.article > .article-content > span {
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 48px;
+}
+
+.article > .article-nav {
+  display: flex;
+  justify-content: flex-end;
+  border-top: 1px solid #18c876;
+  margin-top: 79px;
+}
+
+.PC .article > .article-nav > div > span {
+  display: inline-block;
+  margin-top: 50px;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.PC .article > .article-nav > div .article-box {
+  width: 400px;
+  height: 167px;
+  border: 1px solid #e1e1e1;
+  margin-top: 10px;
+  margin-bottom: 128px;
+}
+
+.PC .article_side-margin {
+  margin-left: 20px;
+}
+
+.PC .article > .article-nav > div .article-box > span {
+  font-size: 24px;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 40px;
+  margin-left: 40px;
+}
+
+.PC .article > .article-nav > div .article-box > p {
+  font-size: 18px;
+  display: block;
+  margin-top: 44px;
+  margin-left: 40px;
+}
+
+.PC .article > .article-nav > div div:hover {
+  border-color: #18c876;
+}
+
+/* 모바일 */
+.mobile .menu-plant-note {
+  width: 402px;
+  height: 2314px;
+}
+
+.mobile .menu-plant-note > h1 {
+  justify-content: flex-start;
+  margin-top: 180px;
+  margin-left: 20px;
+  font-size: 48px;
+  line-height: 38px;
+}
+
+.mobile > .menu-plant-note > .plant-note-box {
+  margin-top: 35px;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile > .menu-plant-note > div > div {
+  width: 362px;
+  height: 220px;
+  border: 1px solid #e1e1e1;
+  background-color: white;
+  cursor: pointer;
+  margin-bottom: 25px;
+}
+
+.mobile > .menu-plant-note > .plant-note-box a {
+  margin: 10px 0px 57px 35px;
+}
+
+.mobile > .menu-plant-note > .plant-note-box span {
+  font-size: 24px;
+  font-weight: bold;
+  display: block;
+  margin-top: 71px;
+  margin-left: 35px;
+}
+
+.mobile > .menu-plant-note > .plant-note-box p {
+  margin-top: 56px;
+  margin-left: 35px;
+  font-size: 16px;
+}
+
+.mobile > .menu-plant-note > .plant-note-box img {
+  margin-left: 35px;
+  margin-top: 35px;
+}
+/* ------ Plant Note-Article 시작 ------ */
+.mobile .article {
+  width: 402px;
+  margin: 0 auto;
+}
+
+.mobile .article > .article-title {
+  border-bottom: 1px solid #18c876;
+  margin-bottom: 50px;
+  margin-left: 20px;
+}
+
+.mobile .article > .article-title > h1 {
+  display: flex;
+  justify-content: center;
+  font-size: 36px;
+  text-align: center;
+}
+
+.mobile .article > .article-content > img {
+  width: 362px;
+  height: 514px;
+  border-radius: 20px;
+  margin-bottom: 86px;
+  margin-left: 20px;
+}
+
+.mobile .article > .article-content > article {
+  font-size: 18px;
+  line-height: 30px;
+  margin-left: 20px;
+}
+
+.mobile .article > .article-content > span {
+  font-size: 24px;
+  margin-left: 20px;
+}
+
+.mobile .article > .article-nav {
+  display: block;
+  border-top: 1px solid #18c876;
+  margin-left: 20px;
+}
+
+.mobile .article > .article-nav > div > span {
+  display: inline-block;
+  margin-top: 50px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.mobile .article > .article-nav > div .article-box {
+  width: 362px;
+  height: 68px;
+  border: 1px solid #e1e1e1;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mobile .article > .article-nav > div .article-box > span {
+  font-size: 16px;
+  font-weight: bold;
+  display: inline-block;
+  margin-left: 30px;
+}
+
+.mobile .article > .article-nav > div .article-box > p {
+  font-size: 12px;
+  margin-right: 30px;
+}
+
+.mobile .article > .article-nav > div div:hover {
+  border-color: #18c876;
+}
+/* ------ Menu Plant Note 끝 ------ */
+
+/* ------ Contact 시작 ------ */
+/* PC */
+.PC .contact > img {
+  width: 960px;
+  height: 1395px;
+}
+
+.PC .contact {
+  display: flex;
+}
+
+.PC .contact > .container {
+  width: 690px;
+  height: 1118px;
+  margin-left: 144px;
+}
+
+.contact > .container > h1 {
+  font-size: 80px;
+}
+
+.contact > .container > span {
+  font-size: 18px;
+  line-height: 28px;
+  display: inline-block;
+  margin-bottom: 48px;
+}
+
+.contact > .container div > span {
+  font-size: 18px;
+  font-weight: regular;
+  color: #18c876;
+}
+
+.contact > .container div input {
+  border-radius: 15px;
+  border-color: #d7d7d7;
+  width: 690px;
+  height: 60px;
+  padding-left: 24px;
+  margin-top: 12px;
+  margin-bottom: 34px;
+}
+
+.contact > .container div textarea {
+  border-radius: 15px;
+  border-color: #d7d7d7;
+  width: 690px;
+  height: 300px;
+  padding-top: 24px;
+  padding-left: 24px;
+  margin-top: 12px;
+  margin-bottom: 34px;
+}
+
+.contact > .container div > div p:nth-child(1) {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.contact > .container div > div p:nth-child(2) {
+  font-size: 14px;
+  font-weight: bold;
+  color: red;
+  margin-left: 2px;
+}
+
+.contact > .container div > div {
+  display: flex;
+}
+
+.contact > .container div > label {
+  display: flex;
+  position: relative;
+  top: 2px;
+}
+
+.PC .contact > .container div > label > .checkbox {
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  margin-right: 8px;
+  position: relative;
+  top: 6px;
+  accent-color: #18c876;
+}
+
+.PC .contact > .container div > label > p {
+  font-size: 18px;
+}
+
+.contact > .container > button {
+  width: 690px;
+  height: 61px;
+  border-radius: 20px;
+  border: none;
+  background-color: #18c876;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+/* 모바일 */
+.mobile > .contact > img {
+  width: 402px;
+  height: 583px;
+}
+
+.mobile > .contact {
+  display: block;
+  height: 1975px;
+}
+
+.mobile > .contact > .container {
+  width: 362px;
+  height: 1223px;
+}
+
+.mobile > .contact > .container > h1 {
+  text-align: center;
+}
+
+.mobile > .contact > .container > span {
+  font-size: 16px;
+  margin-bottom: 99px;
+  text-align: center;
+  margin-left: 20px;
+}
+
+.mobile > .contact > .container div > span {
+  margin-left: 20px;
+}
+
+.mobile > .contact > .container div input {
+  width: 362px;
+  margin-bottom: 30px;
+  margin-left: 20px;
+}
+
+.mobile > .contact > .container div textarea {
+  width: 362px;
+  margin-bottom: 30px;
+  margin-left: 20px;
+}
+
+.mobile > .contact > .container div > div p:nth-child(1) {
+  margin-left: 20px;
+}
+
+.mobile > .contact > .container div > label > .checkbox {
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  margin-right: 8px;
+  position: relative;
+  top: 3px;
+  accent-color: #18c876;
+}
+
+.mobile > .contact > .container > button {
+  width: 362px;
+  margin-left: 20px;
+}
+
+.mobile > .contact > .container div > label > p {
+  font-size: 14px;
+}
+
+/* ------ Contact 끝 ------ */
+
+.tool-price {
+  font-size: 24px;
+  font-weight: light;
+  display: flex;
+  align-self: end;
+  margin-top: 138px;
+}
