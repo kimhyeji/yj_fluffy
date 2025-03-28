@@ -346,61 +346,61 @@
         </container>
         </section>
         <section class="how-to">
-        <img src="https://imgur.com/gsClQK4.png" alt="">
-        <div class="swiper mySwiper-2 swiper-position">
-            <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <p>01</p>
-                <span>Contact에서<br>케어 서비스를 예약해주세요.</span>
+            <img src="https://imgur.com/gsClQK4.png" alt="">
+            <div class="swiper mySwiper-2-m swiper-position">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <p>01</p>
+                        <span>Contact에서<br>케어 서비스를 예약해주세요.</span>
+                    </div>
+                    <div class="swiper-slide">
+                        <p>02</p>
+                        <span>Fluffy Touching에서<br>방문 일정을 알려드려요.</span>
+                    </div>
+                    <div class="swiper-slide">
+                        <p>03</p>
+                        <span>약속한 날짜에 식물과<br>함께 방문해주세요.</span>
+                    </div>
+                    <div class="swiper-slide">
+                        <p>04</p>
+                        <span>식물의 상태를 진단하고,<br>가드닝 방법을 알려드려요.</span>
+                    </div>
+                </div>
             </div>
-            <div class="swiper-slide">
-                <p>02</p>
-                <span>Fluffy Touching에서<br>방문 일정을 알려드려요.</span>
+            <div class="text">
+                <span>가드닝을 위한 도구는<br>준비되어 있나요?</span>
+                <button class="button">더보기<img src="https://imgur.com/15t6S3N.png" alt="Tool.html"></button>
             </div>
-            <div class="swiper-slide">
-                <p>03</p>
-                <span>약속한 날짜에 식물과<br>함께 방문해주세요.</span>
+            <container class="image-block">
+                <div>
+                <img src="https://imgur.com/DlaoMHD.png" alt="#">
+                <img src="https://imgur.com/xCrr8iL.png" alt="#">
+                <img src="https://imgur.com/qP4VrMY.png" alt="#">
+                <img src="https://imgur.com/OcxT8vk.png" alt="#">
+                </div>
+            </container>
+            </section>
+            <section class="plant-note">
+            <div class="text">
+                <span>Plant<br>Note</span>
+                <button class="button">더보기<img src="https://imgur.com/15t6S3N.png" alt="PlantNote-detail.html"></button>
             </div>
-            <div class="swiper-slide">
-                <p>04</p>
-                <span>식물의 상태를 진단하고,<br>가드닝 방법을 알려드려요.</span>
+            <div class="plant-note-box">    
+                <div OnClick="location.href ='PlantNote-articel-1.html';">
+                    <img src="https://imgur.com/BYw2453.png" alt="">
+                    <a href="#">겨울철 식물관리</a>
+                    <p>2025.01.21</p>
+                </div>
+                <div class="side-margin" OnClick="location.href ='PlantNote-articel-2.html';">
+                    <img src="https://imgur.com/BYw2453.png" alt="">
+                    <a href="#">식물의 성장기에 할 일</a>
+                    <p>2025.01.21</p>
+                </div>
+                <div OnClick="location.href ='PlantNote-articel-3.html';">
+                    <span>영양 공급이 필요한 순간</span>
+                    <p>2025.01.21</p>
+                </div>
             </div>
-            </div>
-        </div>
-        <div class="text">
-            <span>가드닝을 위한 도구는<br>준비되어 있나요?</span>
-            <button class="button">더보기<img src="https://imgur.com/15t6S3N.png" alt="Tool.html"></button>
-        </div>
-        <container class="image-block">
-            <div>
-            <img src="https://imgur.com/DlaoMHD.png" alt="#">
-            <img src="https://imgur.com/xCrr8iL.png" alt="#">
-            <img src="https://imgur.com/qP4VrMY.png" alt="#">
-            <img src="https://imgur.com/OcxT8vk.png" alt="#">
-            </div>
-        </container>
-        </section>
-        <section class="plant-note">
-        <div class="text">
-            <span>Plant<br>Note</span>
-            <button class="button">더보기<img src="https://imgur.com/15t6S3N.png" alt="PlantNote-detail.html"></button>
-        </div>
-        <div class="plant-note-box">    
-            <div OnClick="location.href ='PlantNote-articel-1.html';">
-                <img src="https://imgur.com/BYw2453.png" alt="">
-                <a href="#">겨울철 식물관리</a>
-                <p>2025.01.21</p>
-            </div>
-            <div class="side-margin" OnClick="location.href ='PlantNote-articel-2.html';">
-                <img src="https://imgur.com/BYw2453.png" alt="">
-                <a href="#">식물의 성장기에 할 일</a>
-                <p>2025.01.21</p>
-            </div>
-            <div OnClick="location.href ='PlantNote-articel-3.html';">
-                <span>영양 공급이 필요한 순간</span>
-                <p>2025.01.21</p>
-            </div>
-        </div>
         </section>
         <section class="footer">
             <div class="footer-menu">
@@ -477,6 +477,11 @@ var swiper = new Swiper(".mySwiper-1", {
 });
 
 var swiper = new Swiper(".mySwiper-2", {
+    effect: "cards",
+    grabCursor: true,
+});
+
+var swiper = new Swiper(".mySwiper-2-m", {
     effect: "cards",
     grabCursor: true,
 });
