@@ -476,21 +476,28 @@ var swiper = new Swiper(".mySwiper-1", {
     },
 });
 
+// swiper 2 start
 $(document).ready(function () {
     let currentSwiper = null;
     let currentMode = "";
     let savedIndex = 0;
 
-    function initReversedSwiper(selector, initialIndex = 0) {
+    let hasReversedMobile = false;
+    let hasReversedPC = false;
+
+    function initReversedSwiper(selector, initialIndex = 0, reversedFlagName) {
         const $swiper = $(selector);
         if (!$swiper.is(":visible")) return null;
 
         const $wrapper = $swiper.find(".swiper-wrapper");
-        const $slides = $wrapper.children(".swiper-slide").get().reverse();
 
-        $.each($slides, function (index, slide) {
-            $wrapper.append(slide);
-        });
+        if (!window[reversedFlagName]) {
+            const $slides = $wrapper.children(".swiper-slide").get().reverse();
+            $.each($slides, function (index, slide) {
+                $wrapper.append(slide);
+            });
+            window[reversedFlagName] = true;
+        }
 
         const swiper = new Swiper(selector, {
             effect: "cards",
@@ -513,7 +520,6 @@ $(document).ready(function () {
         const mode = getMode();
 
         if (mode !== currentMode) {
-            // ✅ 현재 슬라이드 위치 저장
             if (currentSwiper) {
                 savedIndex = currentSwiper.realIndex;
                 currentSwiper.destroy(true, true);
@@ -521,9 +527,9 @@ $(document).ready(function () {
             }
 
             if (mode === "mobile") {
-                currentSwiper = initReversedSwiper(".mySwiper-2-m", savedIndex);
+                currentSwiper = initReversedSwiper(".mySwiper-2-m", savedIndex, "hasReversedMobile");
             } else {
-                currentSwiper = initReversedSwiper(".mySwiper-2", savedIndex);
+                currentSwiper = initReversedSwiper(".mySwiper-2", savedIndex, "hasReversedPC");
             }
 
             currentMode = mode;
@@ -536,8 +542,7 @@ $(document).ready(function () {
         initSwiperByMode();
     });
 });
-
-
+// swiper 2 end
 
 // catrgory-swiper
 var swiper = new Swiper(".mySwiper", {
