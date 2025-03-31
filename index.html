@@ -479,10 +479,10 @@ var swiper = new Swiper(".mySwiper-1", {
 $(document).ready(function () {
     let currentSwiper = null;
     let currentMode = "";
+    let savedIndex = 0;
 
     function initReversedSwiper(selector, initialIndex = 0) {
         const $swiper = $(selector);
-
         if (!$swiper.is(":visible")) return null;
 
         const $wrapper = $swiper.find(".swiper-wrapper");
@@ -513,15 +513,17 @@ $(document).ready(function () {
         const mode = getMode();
 
         if (mode !== currentMode) {
+            // ✅ 현재 슬라이드 위치 저장
             if (currentSwiper) {
+                savedIndex = currentSwiper.realIndex;
                 currentSwiper.destroy(true, true);
                 currentSwiper = null;
             }
 
             if (mode === "mobile") {
-                currentSwiper = initReversedSwiper(".mySwiper-2-m", 4);
+                currentSwiper = initReversedSwiper(".mySwiper-2-m", savedIndex);
             } else {
-                currentSwiper = initReversedSwiper(".mySwiper-2", 4);
+                currentSwiper = initReversedSwiper(".mySwiper-2", savedIndex);
             }
 
             currentMode = mode;
@@ -535,20 +537,6 @@ $(document).ready(function () {
     });
 });
 
-
-
-
-// var swiper = new Swiper(".mySwiper-2", {
-//     effect: "cards",
-//     grabCursor: true,
-//     loop: true
-// });
-
-// var swiper = new Swiper(".mySwiper-2-m", {
-//     effect: "cards",
-//     grabCursor: true,
-//     loop: true
-// });
 
 
 // catrgory-swiper
