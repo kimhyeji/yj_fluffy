@@ -476,19 +476,79 @@ var swiper = new Swiper(".mySwiper-1", {
     },
 });
 
-var swiper = new Swiper(".mySwiper-2", {
-    effect: "cards",
-    grabCursor: true,
-    loop: true,
-    rotate: true
+$(document).ready(function () {
+    let currentSwiper = null;
+    let currentMode = "";
+
+    function initReversedSwiper(selector, initialIndex = 0) {
+        const $swiper = $(selector);
+
+        if (!$swiper.is(":visible")) return null;
+
+        const $wrapper = $swiper.find(".swiper-wrapper");
+        const $slides = $wrapper.children(".swiper-slide").get().reverse();
+
+        $.each($slides, function (index, slide) {
+            $wrapper.append(slide);
+        });
+
+        const swiper = new Swiper(selector, {
+            effect: "cards",
+            grabCursor: true,
+            loop: true,
+            initialSlide: initialIndex,
+        });
+
+        swiper.update();
+        swiper.slideTo(swiper.activeIndex, 0, false);
+
+        return swiper;
+    }
+
+    function getMode() {
+        return window.innerWidth <= 768 ? "mobile" : "pc";
+    }
+
+    function initSwiperByMode() {
+        const mode = getMode();
+
+        if (mode !== currentMode) {
+            if (currentSwiper) {
+                currentSwiper.destroy(true, true);
+                currentSwiper = null;
+            }
+
+            if (mode === "mobile") {
+                currentSwiper = initReversedSwiper(".mySwiper-2-m", 4);
+            } else {
+                currentSwiper = initReversedSwiper(".mySwiper-2", 4);
+            }
+
+            currentMode = mode;
+        }
+    }
+
+    initSwiperByMode();
+
+    $(window).on("resize", function () {
+        initSwiperByMode();
+    });
 });
 
-var swiper = new Swiper(".mySwiper-2-m", {
-    effect: "cards",
-    grabCursor: true,
-    loop: true,
-    rotate: true
-});
+
+
+
+// var swiper = new Swiper(".mySwiper-2", {
+//     effect: "cards",
+//     grabCursor: true,
+//     loop: true
+// });
+
+// var swiper = new Swiper(".mySwiper-2-m", {
+//     effect: "cards",
+//     grabCursor: true,
+//     loop: true
+// });
 
 
 // catrgory-swiper
