@@ -499,11 +499,15 @@ $(document).ready(function () {
             window[reversedFlagName] = true;
         }
 
+        const totalSlides = $wrapper.children(".swiper-slide").length;
+
+        const correctedIndex = (totalSlides - 1) - initialIndex;
+
         const swiper = new Swiper(selector, {
             effect: "cards",
             grabCursor: true,
             loop: true,
-            initialSlide: initialIndex,
+            initialSlide: correctedIndex,
         });
 
         swiper.update();
