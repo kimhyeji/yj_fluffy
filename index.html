@@ -482,6 +482,7 @@ $(document).ready(function () {
     let currentMode = "";
     let savedIndex = 0;
 
+    // 역순 정렬 여부 상태
     let hasReversedMobile = false;
     let hasReversedPC = false;
 
@@ -491,7 +492,7 @@ $(document).ready(function () {
 
         const $wrapper = $swiper.find(".swiper-wrapper");
 
-        // 슬라이드 역순은 한 번만 적용
+        // ✅ 슬라이드는 한 번만 역순 정렬
         if (!window[reversedFlagName]) {
             const $slides = $wrapper.children(".swiper-slide").get().reverse();
             $.each($slides, function (index, slide) {
@@ -501,8 +502,6 @@ $(document).ready(function () {
         }
 
         const totalSlides = $wrapper.children(".swiper-slide").length;
-
-        // 슬라이드 역순으로 바꿨기 때문에 인덱스도 보정 필요
         const correctedIndex = (totalSlides - 1) - initialIndex;
 
         const swiper = new Swiper(selector, {
@@ -510,6 +509,8 @@ $(document).ready(function () {
             grabCursor: true,
             loop: true,
             initialSlide: correctedIndex,
+            observer: true,         // ✅ DOM 변화 감지
+            observeParents: true    // ✅ 부모 display 변화 감지
         });
 
         swiper.update();
@@ -525,33 +526,30 @@ $(document).ready(function () {
     function initSwiperByMode() {
         const mode = getMode();
 
-        if (mode !== currentMode) {
-            if (currentSwiper) {
-                const $wrapper = $(currentSwiper.el).find(".swiper-wrapper");
-                const totalSlides = $wrapper.children(".swiper-slide").length;
-                const realIndex = currentSwiper.realIndex;
+        if (currentSwiper) {
+            // ✅ 이전 Swiper 상태 저장
+            const $wrapper = $(currentSwiper.el).find(".swiper-wrapper");
+            const totalSlides = $wrapper.children(".swiper-slide").length;
+            const realIndex = currentSwiper.realIndex;
 
-                // 역순으로 보이던 것을 원래 순서 기준으로 되돌림
-                savedIndex = (totalSlides - 1) - realIndex;
+            savedIndex = (totalSlides - 1) - realIndex;
 
-                currentSwiper.destroy(true, true);
-                currentSwiper = null;
-            }
-
-            if (mode === "mobile") {
-                currentSwiper = initReversedSwiper(".mySwiper-2-m", savedIndex, "hasReversedMobile");
-            } else {
-                currentSwiper = initReversedSwiper(".mySwiper-2", savedIndex, "hasReversedPC");
-            }
-
-            currentMode = mode;
+            currentSwiper.destroy(true, true);
+            currentSwiper = null;
         }
+
+        // ✅ 항상 재초기화 (reverse는 한 번만 실행되도록)
+        if (mode === "mobile") {
+            currentSwiper = initReversedSwiper(".mySwiper-2-m", savedIndex, "hasReversedMobile");
+        } else {
+            currentSwiper = initReversedSwiper(".mySwiper-2", savedIndex, "hasReversedPC");
+        }
+
+        currentMode = mode;
     }
 
-    // 초기 실행
     initSwiperByMode();
 
-    // 반응형 대응
     $(window).on("resize", function () {
         initSwiperByMode();
     });
